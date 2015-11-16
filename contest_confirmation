@@ -1,0 +1,27 @@
+<div class="full_page_photo" style="background-image: url(http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/f6dbff9c3ff2572186f780a16fceabf0/img4.jpg);">
+     <div class="container">
+          <!-- <section class="call_to_action">
+               <h3 class="animated bounceInDown">we really <strong>love</strong> what we do</h3>
+               <h4 class="animated bounceInUp skincolored">while <strong>always trying</strong> to get the job done!</h4>
+          </section> -->
+     </div>
+</div>
+<div class="main">
+     <div class="container">
+          <section class="hgroup">
+               <h1>Thank you</h1>
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/home">Home</a> </li>
+               </ul>
+          </section>
+          <section class="article-text">
+               <div class="row">
+                    You have been entered in our <strong>Enter to Win</strong> contest! Good Luck!
+                    <br>
+                    Click <a href="/home" alt="home">here</a> to return to the site.
+               </div>
+          </section>
+         
+     </div>
+     
+</div>
