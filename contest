@@ -1,0 +1,242 @@
+<style>
+    .main{
+        width:940px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    h1, .contest_description {
+        text-align:center;
+        
+    }
+    h1{
+        margin-top:35px;
+    }
+    .contest_description{
+        margin-bottom:35px;
+    }
+    .contest_form_div{
+        margin-top:20px;
+        width:60%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .large_field{
+        display:inline-block;
+        width:49%;
+    }
+    .small_field {
+        width:32.5%;
+        display:inline-block;
+    }
+    
+    .full_field input, .large_field input, .small_field input {
+        width:98%;
+    }
+    
+    @media (max-width: 767px) {
+        .main{
+            width:95%;
+        }
+        .large_field, .small_field {
+            width:100%;
+        }
+        .contest_form_div{
+            width:100%;
+        }
+    }
+</style>
+
+
+<div class="main">
+    <h1></h1>
+   
+     <img class="contest_image" src="http://kodekloud.s3.amazonaws.com/sites/54cfab316e6f6433ad020000/696687d954d5727f2581c6e4b92bdfe2/JackAstor's_Contest_Page_940x450px.png" />
+     <br>
+     <div class="contest_form_div">
+           <p class="contest_description">Contest closes April 30th, 2015.   One entry per person.  Winner will be contacted via telephone.</p>
+
+         <form action="http://mobilefringe.createsend.com/t/d/s/tkhiut/" method="post" id="contest_form">
+            <p style="display:none">
+                <label for="fieldName">Name</label><br />
+                <input id="fieldName" name="cm-name" type="text"/>
+            </p>
+            
+            <p class="large_field">
+                <label for="firstName">First Name*</label><br/>
+                <input id="firstName" type="text" required placeholder="First Name" />
+            </p>
+            <p class="large_field">
+                <label for="lastName">Last Name*</label><br/>
+                <input id="lastName" type="text" required placeholder="Last Name"/>
+            </p>
+          
+            <p class="large_field">
+                <label for="fieldEmail">Email*</label><br />
+                <input id="fieldEmail" name="cm-tkhiut-tkhiut" type="email" required placeholder="Email"/>
+            </p>
+            <p class="large_field">
+                <label for="fieldjrihe">Phone Number*</label><br />
+                <input id="fieldjrihe" name="cm-f-jrihe" type="text" required placeholder="Phone Number"/>
+            </p>
+            <p class="full_field">
+                <label for="fieldjrihyh">Street Address</label><br />
+                <input id="fieldjrihyh" name="cm-f-jrihyh" type="text" placeholder="Street Address"/>
+            </p>
+            <p class="small_field">
+                <label for="fieldjrihyd">City</label><br />
+                <input id="fieldjrihyd" name="cm-f-jrihyd" type="text" placeholder="City"/>
+            </p>
+            
+            <p class="small_field">
+                <label for="fieldjrihs">Postal Code*</label><br />
+                <input id="fieldjrihs" name="cm-f-jrihs" type="text" required placeholder="Postal Code"/>
+            </p>
+            <p class="small_field">
+                <label for="fieldjrihg">Year of Birth*</label><br />
+                <input id="fieldjrihg" name="cm-f-jrihg" type="text" required placeholder= "Year of Birth"/>
+            </p>
+            <p style="display:none">
+                <label for="fieldjrihw">Contest ID</label><br />
+                <input id="fieldjrihw" name="cm-f-jrihw" type="text" />
+            </p>
+            <br>
+            <br>
+            <span>
+                <label for="newsletter_signup" style="display:none">Agree Terms</label>
+              <input type="checkbox" class="info_check" id="newsletter_signup"/>&nbsp;I agree to receive emails from 10 Dundas East
+            </span>
+            <br>
+            <br>
+            <span>
+                <label for="agree_terms" style="display:none">Agree Terms</label>
+              <input type="checkbox" class="info_check" id="agree_terms" required/>&nbsp;I agree to the <a href = "/rules_regulations"><u>terms and conditions</u></a>. 
+            </span>
+            <br>
+            <br>
+            <p>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </p>
+        </form>
+     </div>
+</div>
+
+<script>
+    
+    $('#contest_form').submit(function (e) {
+        e.preventDefault();
+        if ($("#agree_terms").prop("checked") == true){
+            var e = verify_required_fields();
+            if (e == true){
+                var name = $("#firstName").val() + " " + $("#lastName").val();
+                $('input[name="cm-name"]').attr('value',name);
+                var date = new Date;
+                contest_id = (get_month(date.getMonth())) + date.getFullYear();
+                $('input[name="cm-f-jrihw"]').attr('value',contest_id);
+                if ($("#newsletter_signup").prop("checked") == true){
+                    var s = check_email();
+                    if (s == true){
+                        var email = $("#fieldEmail").val();
+                        $('input[name="cm-tkyhii-tkyhii"]').attr('value',email);
+                        //console.log($("#subForm").serialize())
+                         $.getJSON(
+                            "http://mobilefringe.createsend.com/t/d/s/tkyhii/?callback=?",
+                           $("#subForm").serialize(),
+                            function (data) {
+                                if (data.Status === 400) {
+                                    alert("Please try again later.");
+                                } else { // 200
+                                    $('#contest_form').unbind('submit').submit();
+                                }
+                        });  
+                    } else {
+                        alert("Invaid E-mail address.")
+                    }
+                    
+                } else {
+                    $('#contest_form').unbind('submit').submit();    
+                }    
+            } else {
+                alert("One or more required fields are blank! please fill in all fields marked with * and try again.")
+            }
+            
+            
+        } else {
+            alert("Please agree to the terms and conditions before submitting!")
+        }
+        
+    });
+    
+    
+    function verify_required_fields (){
+        if ($("#firstName").val() != "" && $("#lastName").val() != "" && $("#fieldEmail").val() != "" && $("#fieldjrihe").val() != "" && $("#fieldjrihs").val() != "" && $("#fieldjrihg").val() != "") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function check_email (){
+        var email = $("#fieldEmail").val();
+        if( !validateEmail(email)) {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    function validateEmail($email) {
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      if( !emailReg.test( $email ) ) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    
+    function get_month (id){
+        switch(id) {
+            case 0:
+                month = "Jan"
+                break;
+            case 1:
+                month = "Feb"
+                break;
+            case 2:
+                month = "Mar"
+                break;
+            case 3:
+                month = "Apr"
+                break;
+            case 4:
+                month = "May"
+                break;
+            case 5:
+                month = "June"
+                break;
+            case 6:
+                month = "July"
+                break;
+            case 7:
+                month = "Aug"
+                break;
+            case 8:
+                month = "Sep"
+                break;
+            case 9:
+                month = "Oct"
+                break;
+            case 10:
+                month = "Nov"
+                break;
+            case 11:
+                month = "Dec"
+                break;
+                
+        }
+        return month;
+    }
+    $(document).ready(function() {
+    
+    });
+</script>
