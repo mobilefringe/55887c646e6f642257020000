@@ -1,0 +1,112 @@
+<div class="full_page_photo" style="background-image: url(http://kodekloud.s3.amazonaws.com/sites/54cfab316e6f6433ad020000/f14cc5a56ecf3c1a6d02cf7d4c31514f/contact.png);">
+     <div class="container">
+          <!-- <section class="call_to_action">
+               <h3 class="animated bounceInDown skincolored">we design <strong>value</strong> into profit</h3>
+               <br>
+               <h4 class="animated bounceInUp">our <strong>customers</strong> are always <strong>happy</strong>!</h4>
+          </section> -->
+     </div>
+</div>
+<div class="main">
+     <div class="container">
+          <section class="hgroup">
+               <h1>Contact Us</h1>
+               <div id = "contact_container">
+               <script id="contact_template" type="x-tmpl-mustache/text">
+                <h2><strong>{{contact_name}}</strong>  {{contact_phone}} <br> {{contact_email}}</h2>
+               </script>
+               </div>
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/home">Home</a> </li>
+                    <li class="active">Contact Us</li>
+               </ul>
+          </section>
+          <section class="article-text">
+            <h1>Customer Feedback</h1>
+               <div class="row">
+                    <div class="contact_form col-sm-8 col-md-8" id="contact_form_container">
+                        <script id="contact_form_template" type="x-tmpl-mustache/text">
+                         <form name="contact_form" id="contact_form" method="post" action="http://mobilefringe.createsend.com/t/d/s/tkuikd/">
+                              <div class="row">
+                                   <div class="col-sm-6 col-md-6">
+                                        <label>Name</label>
+                                        <input name="cm-name" id="name" class="form-control" type="text" value="" required>
+                                   </div>
+                                   <div class="col-sm-6 col-md-6">
+                                        <label>E-mail</label>
+                                        <input name="cm-tkuikd-tkuikd" id="email" class="form-control" type="text" value="" required>
+                                   </div>
+                              </div>
+                              <div class="row">
+                                   <div class="col-sm-12 col-md-12">
+                                        <label>Subject</label>
+                                        <input name="cm-f-jrhiil" id="subject" class="form-control" type="text" required>
+                                   </div>
+                              </div>
+                              <div class="row">
+                                   <div class="col-sm-12 col-md-12">
+                                        <label>Message</label>
+                                        <textarea name="cm-f-jrhiir" id="message" rows="8" class="form-control" required></textarea>
+                                   </div>
+                                   <div class="col-sm-12 col-md-12"><br/>
+                                        <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+                                   </div>
+                              </div>
+                         </form>
+                        </script>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                         <div class="service_teaser vertical">
+                            <div class="service_photo">
+                                <figure style="background-image:url(http://kodekloud.s3.amazonaws.com/sites/54cfab316e6f6433ad020000/3492504cd42b4f2bd25ed6a2210bf23d/Centre-Info.jpg)"></figure>
+                            </div>
+                            <div class="service_details" id="centre_info_container">
+                                <script id="centre_info_template" type="x-tmpl-mustache/text">
+                                    <h2 class="section_header skincolored">Centre Information<small> <br>{{name}}</br> <br>{{address1}},<br> <br> {{postal_code}} </br> <br>{{city}}, {{province_state}}</br></small></h2>
+                                    <p style="margin-bottom:0"><i class="fa fa-phone"></i> {{contact_phone}}</p>
+                                    
+                                    <p style="margin-bottom:0"><i class="fa fa-envelope"></i> {{contact_email}}</p>
+                                    
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+          </section>
+         
+     </div>
+     
+</div>
+
+<script>
+    $("#contact_link").addClass("active");
+    
+    $(document).ready(function() {
+        
+                
+        function renderPageData(){
+            var propertyDetails = getPropertyDetails();
+            renderTemplate("#centre_info_container", "#centre_info_template", propertyDetails)
+            renderTemplate("#contact_container", "#contact_template", propertyDetails)
+            renderTemplate("#contact_form_container", "#contact_form_template", propertyDetails)
+        }
+        
+        function renderTemplate(container, template, collection){
+            
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);
+            $.each( item_list , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            
+        }
+        
+        loadMallData(renderPageData);
+    });
+</script>
