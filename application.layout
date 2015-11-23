@@ -518,7 +518,7 @@ with sales of over $1,300 per square foot.</br>
            <div class="container">
                 <div class="row">
                      <div class="col-sm-6 col-md-6 footer-text"> ©2015 Twin Pines Mall All rights reserved. | <a href="/privacy_policy" color="green">Privacy Policy </a></div>
-                     <div class="text-right col-sm-6 col-md-6 footer-text"> Powered by <a href="http://mallmaverick.com/" target="_blank" style="color:green">Mall Maverick</a> </div>
+                     <div class="text-right col-sm-6 col-md-6 footer-text"> Powered by <a href="http://mallmaverick.com/" target="_blank" style="color:green !important">Mall Maverick</a> </div>
                 </div>
            </div>
       </section>
