@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Twin Pines Mall</title>
+<script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)p
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+     ga('create', 'UA CODE IN HERE', 'auto');
+     ga('send', 'pageview');
+</script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/60cb7d89e157debbb7914a941327ad2c/animate.css" rel="stylesheet" type="text/css">
+<link href="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/f6dbff9c3ff2572186f780a16fceabf0/flexslider.css" rel="stylesheet">
+<link rel="stylesheet" href="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/60cb7d89e157debbb7914a941327ad2c/prettyPhoto.css" type="text/css" media="screen">
+<link href="/application.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/modernizr.custom.48287.js"></script>
+<!-- favicon -->
+<link rel="shortcut icon" href="http://kodekloud.s3.amazonaws.com/sites/54cfab316e6f6433ad020000/c3b9b33531d43aa727466046dab23a8b/Untitled-9.png" type="image/x-icon" />
+
+<!-- jQuery Version 1.11.0 -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
+<!--Mustache is a client side templating engine https://github.com/janl/mustache.js/ -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+<!--jReject is used to warn users certain browsers aren't compatible with this site-->
+<script src="//cdn.jsdelivr.net/jquery.jreject/1.0.2/js/jquery.reject.js"></script>
+<link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet" type="text/css">
+<!--MallMaverick v=0.3-->
+<script src="http://mallmaverick.codecloudapp.com/mallmaverick.js?v=0.3"></script>
+<script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
+<script src="/application.js"></script>
+<script>
+    $(document).ready(function() {
+        $.reject({  
+            reject: { all: false, msie: 9 },  
+            header: 'Thanks for visiting 10 Dundas East', // Header Text  
+            paragraph1: 'Unfortunately your browser is not officially supported with our site', // Paragraph 1  
+            paragraph2: 'For the best experience please install one of the many optional browsers below to proceed',  
+            closeMessage: 'You may continue using the site however certain features and content may not be accessible. Thank you.',
+            closeCookie: true,
+            browserInfo: { // Settings for which browsers to display  
+                chrome: {  
+                    // Text below the icon  
+                    text: 'Google Chrome',  
+                    // URL For icon/text link  
+                    url: 'http://www.google.com/chrome/',  
+                    // (Optional) Use "allow" to customized when to show this option  
+                    // Example: to show chrome only for IE users  
+                    // allow: { all: false, msie: true }  
+                },  
+                firefox: {  
+                    text: 'Mozilla Firefox',  
+                    url: 'http://www.mozilla.com/firefox/'  
+                },  
+                safari: {  
+                    text: 'Safari',  
+                    url: 'http://www.apple.com/safari/download/'  
+                },  
+                opera: {  
+                    text: 'Opera',  
+                    url: 'http://www.opera.com/download/'  
+                },  
+                msie: {  
+                    text: 'Internet Explorer',  
+                    url: 'http://www.microsoft.com/windows/Internet-explorer/'  
+                }  
+            },// Message below close window link  
+            imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
+        });      
+    });
+    setEndPoint('http://twinpines.mallmaverick.com/api/v2/twinpines/all.json');
+    sessionStorage.setItem('primary_locale', 'en-CA');
+    sessionStorage.setItem('secondary_locale', 'fr-CA');
+</script>
+</head>
+<style>
+    /*custom styles*/
+    
+    /*hyperlinks*/
+    
+    .portfolio_item {
+    box-shadow:none !important;
+    }
+    
+    td {
+        padding-top:7px;
+    }
+    td a {
+        color:white;
+    }
+    .email a {
+        color:white;
+    }
+    .text-right col-sm-6 col-md-6 footer-text a {
+        color:white;
+    }
+    a{
+        color:black;
+        text-decoration:inherit;
+    }
+    
+    /*hyperlink hover color*/
+    a:hover{
+        color:green !important;
+    }
+   
+    
+    .navbar .nav li.active a, .navbar .nav li.active a:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+  color: black !important;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+  border-bottom: solid 1px #fff;
+  color: #fff;
+    }
+    .navbar .nav li a:hover, .navbar .nav li a:active {
+    border-bottom: none !important;
+}
+    
+  .main {
+    background-color: #fff;
+    margin-bottom: 60px;
+}
+    
+    .portfolio_item .portfolio_description p {
+  margin: 0;
+  float: left;
+  padding-left: 10px !important;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+    .portfolio_item figure figcaption p {
+  
+  background: black;
+    }
+    
+    .portfolio_item figure figcaption .view_button {
+        background:#299E48 !important;
+    }
+    body{
+        background:white;
+    }
+    @media only screen and (max-width: 767px)
+.full_page_photo {
+    height: 300px;
+    top: 0px !important;
+    display: none;
+}
+    header{
+        background:white;
+    }
+    
+     p input[type='image']{
+       width:100% !important;
+   }
+   .navbar .nav li a:hover, .navbar .nav li a:active {
+
+    border-bottom: solid 1px #389e47;
+    
+    }
+    @media (max-width: 767px)
+    {
+.footer-text {
+    text-align: center;
+    padding-left: 33px !important;
+}
+}
+    .main_window{
+        border:40px solid #bfbfbf;
+    }
+    .btn-primary{
+        background: #299E48 !important;
+        border-color:#299E48 !important;
+        text-align:center;
+        color:white !important;
+    }
+    .btn-primary:hover {
+  background: #299E48 !important;
+  border-color: #299E48 !important;
+  text-align: center;
+ color: #ffffff !important;
+}
+    .btn-danger {
+    color: #FFF;
+    background-color: #299E48;
+    border-color: #299E48;
+}
+   .portfolio_item figure {
+  height: 300px !important;
+ 
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+  color: #ffffff !important;
+  background-color: #299E48;
+  border-color: #299E48;
+}
+    .btn-primary:hover{
+        background: #299E48 !important;
+        border-color:#299E48 !important;
+        text-align:center;
+    }
+    
+    /*menu colors*/
+    .navbar .nav li a{
+        color:black;
+    }
+    
+    .view_button {
+        background:black !important;
+    }
+    
+    .navbar .nav li a:hover,.navbar .nav li a:active{
+        color:black !important;
+    }
+    
+    .site_welcome_msg{
+        font-size:22px !important;
+        margin-top:0 !important;
+        line-height:20px !important;
+    }
+    .site_description{
+        font-size:15px !important;
+        line-height:20px !important;
+        margin-bottom:0 !important;
+    }
+    /*social media box color*/
+    #social_media_wrapper{
+        background:#389e47 !important;
+    }
+    /*social media icon inner color*/
+    #social_media_wrapper a{
+        color:#389e47;
+    }
+    #social_media_wrapper a:hover{
+        color:white;
+        background:#389e47 !important;
+    }
+     .map-mouse-over{
+    /*set color of store highlight and hover over for SVG map*/
+    fill: #a6a6a6;
+    }
+    /*inside page banners*/
+    .page_banner{
+        color:black;
+        /* For Safari 5.1 to 6.0 */
+        background: -webkit-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
+        /* For Opera 11.1 to 12.0 */
+        background: -o-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
+        /* For Fx 3.6 to 15 */
+        background: -moz-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
+        /* Standard syntax */
+        background: linear-gradient(to right,#AEACAC,#C8C8C8, #AEACAC); 
+        box-shadow: 0px 0px 30px lightgray inset;
+    }
+    
+    #description_section{
+         /* For Safari 5.1 to 6.0 */
+        background: -webkit-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
+        /* For Opera 11.1 to 12.0 */
+        background: -o-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
+        /* For Fx 3.6 to 15 */
+        background: -moz-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
+        /* Standard syntax */
+        background: linear-gradient(to right,#AEACAC,#C8C8C8, #AEACAC); 
+        box-shadow: 0px 0px 30px lightgray inset;
+    }
+    
+    .section_header{}
+    .promo_header{
+        border-bottom:solid 1px #cccccc;
+        padding-bottom:10px;
+    }
+    
+    .breadcrumb a {
+        color:green !important;
+    }
+    .right_column_header {
+        color: black ;
+    }
+    
+    .navbar .nav li a:hover {
+        color:black !important;
+    
+    }
+     .site-map-section a:hover {
+         color: #c8c8c8 !important;
+     }
+    @media (max-width: 767px) {
+        .main_window{
+            width:100%;
+            border:15px solid #bfbfbf !important;
+            border-top:none !important;
+        }  
+    }
+
+    
+</style>
+<body>
+<header>
+    <a class="accessible" href="#page_content">[Skip to Content]</a>
+     <div class="container">
+          <div class="navbar navbar-default" role="navigation">
+               <div class="navbar-header"><a class="navbar-brand" href="/home" id="site_logo">
+               <script id="logo_template" type="x-tmpl-mustache/text">{% raw %}<img src="{{site_logo}}" height="70%" width="70%">{% endraw %}</script>
+               </a><a class="btn btn-navbar btn-default navbar-toggle" onclick="javascript:toggle_menu()"><span class="nb_left pull-left"> <span class="fa fa-reorder"></span></span> <!--  <span class="nb_right pull-right">menu</span> --> </a></div>
+                <div class="mobile_menu" style="display:none">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/stores">Directory</a></li>
+                        
+                        <li><a onclick="javascript:toggle_submenu('leasing_dd');">Promos & Events <span class="caret"></span></a>
+                            <div id="leasing_dd" class="submenu" style="display:none">
+                                <ul>
+                                    <li><a href="/promotions">Promotions</a></li>
+                                    <li><a href="/events">Events</a></li>
+                                </ul>    
+                            </div>
+                        </li>
+                         <li><a href="/jobs">Jobs</a></li>
+                        <li><a onclick="javascript:toggle_submenu('contact_dd');">Information <span class="caret"></span></a>
+                            <div id="contact_dd" class="submenu" style="display:none">
+                                <ul>
+                                    <li><a href="/hours">Hours</a></li>
+                                    <li><a href="/find_us2">Location</a></li>
+                                    <li><a href="/info">Info</a></li>
+                                     <li><a href="/guest_services">Guest Services</a></li>
+                                     <li><a href="/gift_card">Gift Cards</a></li>
+                                </ul>    
+                            </div>
+                        </li>
+                       
+                        <li><a href="/posts">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="collapse navbar-collapse">              
+                    <ul class="nav pull-right navbar-nav">
+                        <li id="home_link"><a href="/">Home</a></li>
+                        <li id="directory_link"><a href="/stores">Directory</a></li>
+                         <li id="directory_link" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Promos & Events<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/promotions">Promotions</a></li>
+                                <li><a href="/events">Events</a></li>
+                            </ul> 
+                         </li>
+                         <li id="jobs_link"><a href="/jobs">Jobs</a></li>
+                         
+                        
+                         <li id="contact_link" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Information <span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                 <li><a href="/hours">Hours</a></li>
+                                    <li><a href="/find_us2">Location</a></li>
+                                    <li><a href="/info">Info</a></li>
+                                     <li><a href="/guest_services">Guest Services</a></li>
+                                     <li><a href="/gift_card">Gift Cards</a></li>
+                            </ul> 
+                         </li>
+                          
+                           <li id="jobs_link"><a href="/posts">Blog</a></li>
+                    </ul>
+               </div>
+          </div>
+          
+          <div id="social_media_wrapper"> 
+          
+          <a href="https://www.facebook.com/10DundasEast" target="_blank"><i class="fa fa-facebook"></i><p style="display:none">facebook</p></a> <a href="https://twitter.com/10DundasEast" target="_blank"><i class="fa fa-twitter"></i><p style="display:none">twitter</p></a><a href="http://instagram.com/10dundaseast" target="_blank"><i class="fa fa-instagram"></i><p style="display:none">instagram</p></a><a href="https://www.youtube.com/user/10DundasEast" target="_blank"><i class="fa fa-youtube"></i><p style="display:none">youtube</p></a></div>
+          <a href="http://bentallkennedy.com/" target="_blank"><img class="property_logo" alt="logo" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/14d7e193a4e12033723bf919343b9d1f/bental-logo1.png"/></a>
+     </div>
+</header>
+<div id="page_content">{{yield}}</div>
+
+<footer>
+    <section id="footer_teasers_wrapper">
+        
+        <div class="container">
+            <div class="row">
+                <div class="footer_teaser col-sm-4 col-md-4">
+                    <div id="footer_container">
+                        <script id="footer_template" type="x-tmpl-mustache/text">
+                        {% raw %}
+                        <h3>ABOUT US</h3>
+                        Twin Pine Mall ranks as one of the highest 
+performing shopping centres in North America
+with sales of over $1,300 per square foot.</br>
+                       216 Chrislea Road Vaughan On L4L 8S5</br>
+                        {{city}}, {{province_state}}
+                        </br>
+                        </br>
+                        <p><i class="fa fa-phone"></i> 905-222-2222</p>
+                        <p class="email"><i class="fa fa-envelope"></i> <a href="mailto:info@twinpines.com">info@twinpines.com</a></p>
+                      
+                        <br>
+                        </br>
+                        {% endraw %}
+                        </script>
+                    </div>
+                    <div style="height:30px;position:relative">
+                        <label for="search_input" style="display:none">Search</label>
+                        
+                        <input style="color:black;width:265px" type="text" id="search_input" class="search_input" placeholder="Search"><button class="search_button"><img alt="Search" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/70483e4f30054855ef30b8872dc7948d/icon_search.png"/></button>
+                    </div>
+                 </div>
+                 <div class="footer_teaser col-sm-4 col-md-4">
+                    <div class="search-results" id="search_results" style="display:none">
+                        <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
+                        <script id="search_results_template" type="x-tmpl-mustache/text">{% raw %}
+                        <h4 class="list-group-item header" style="{{stores_header_style}}" data-i18n="nav.stores"></h4>
+                        {{#stores}}
+                            <a href="/stores/{{slug}}" class="list-group-item">
+                                <div class="name">{{name}}</div>
+                                <div class="description">{{description_trim}}</div>
+                                <div class="phone">{{phone}}</div>
+                            </a>
+                        {{/stores}}
+                        <h4 class="list-group-item header" style="{{promotions_header_style}}" data-i18n="nav.promotions"></h4>
+                        {{#promotions}}
+                            <a href="/promotions/{{slug}}" class="list-group-item">
+                                <div class="name">{{name}}</div>
+                                <div class="description">{{description_trim}}</div>
+                            </a>
+                        {{/promotions}}
+                        <h4 class="list-group-item header" style="{{events_header_style}}" data-i18n="nav.events"></h4>
+                        {{#events}}
+                            <a href="/events/{{slug}}" class="list-group-item">
+                                <div class="name">{{name}}</div>
+                                <div class="description">{{description_trim}}</div>
+                            </a>
+                        {{/events}}
+                        </script>{% endraw %}
+                    
+                        <ul class="list-group" >
+                            
+                            
+                            <a  class="close-search list-group-item" style="">
+                                <small>
+                                    <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> 
+                                </small>
+                            </a>
+                            <a  class="close-search list-group-item" style="">
+                                <small>
+                                    <span>Today's Hours </span>
+                                </small>
+                                <small class="pull-right" id="todays-hours-search">
+                                
+                                </small>
+                                <script id="todays_hours_search_template" type="x-tmpl-mustache/text">{% raw %}
+                                    <span style="{{is_open_css}};">
+                                        {{open_time_localized}} - {{close_time_localized}}
+                                    </span>
+                                    <span style="{{is_closed_css}};">
+                                        Closed
+                                    </span>
+                                </script>{% endraw %}
+                            </a>
+                            <div id="search_results_items" class="search-results-items" style="">
+                            <!--RENDERED BY renderSearchResultsTemplate(..) -->
+                            </div>
+                        </ul>
+                    </div>
+                 </div>
+                 <div class="footer_teaser col-sm-4 col-md-4">
+                    <h3 class="footer_text" style="font-size:17px;width:300px;text-align:left">Explore</h3>
+                    <p class="footer_text" style="width:300px;font-size:17px">
+                        
+                        
+                    </p>
+                   <table>
+                    <tr>
+                        <td style="width:150px"><a href="/">Home</a></td>
+                        <td><a href="/">Location</a></td>
+                    
+                    </tr>
+                     <tr>
+                        <td><a href="/stores">Store List</a></td>
+                        <td><a href="/info">Twin Pines Mall Info</a></td>
+                    
+                    </tr>
+                     <tr>
+                        <td><a href="/map">Floor Plan</a></td>
+                        <td><a href="/guest_services">Guest Services</a></td>
+                    
+                    </tr>
+                     <tr>
+                        <td><a href="/promotions">Promotions</a></td>
+                        <td><a href="/gift_card">Gift Card Balance</a></td>
+                    
+                    </tr>
+                     <tr>
+                        <td><a href="/events">Events</a></td>
+                        <td><a href="/jobs">Jobs</a></td>
+                    
+                    </tr>
+                     <tr>
+                        <td><a href="/posts">Blog</a></td>
+                        <td><a href="/hours">Hours</a></td>
+                    
+                    </tr>
+                    
+                  </table>
+                 </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    
+   
+      <section class="copyright">
+           <div class="container">
+                <div class="row">
+                     <div class="col-sm-6 col-md-6 footer-text"> ©2015 Twin Pines Mall All rights reserved. | <a href="/privacy_policy" color="green">Privacy Policy </a></div>
+                     <div class="text-right col-sm-6 col-md-6 footer-text"> Powered by <a href="http://mallmaverick.com/" target="_blank" style="color:green">Mall Maverick</a> </div>
+                </div>
+           </div>
+      </section>
+ </footer>
+
+
+<script src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/bootstrap.min.js" type="text/javascript"></script>
+<script src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
+<script src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/jquery.isotope.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/easing.js"></script>
+<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/wow.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/restart_theme.js"></script>
+<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/collapser.js"></script>
+<script>
+    $('#subForm').submit(function (e) {
+        e.preventDefault();
+        if ($("#agree_terms").prop("checked") == true){
+            $('#subForm').unbind('submit').submit();
+        } else {
+            alert("Please check the agree box if you want to proceed.")
+        }
+        
+    });
+    
+    function toggle_menu (){
+        if ($(".mobile_menu").is(":visible")){
+            $(".mobile_menu").slideUp();
+        } else {
+            $(".mobile_menu").slideDown();    
+        }
+            
+        }
+        function toggle_submenu(id){
+            if ($("#"+id).is(":visible")){
+                $("#"+id).slideUp();
+            }else {
+                $(".submenu").slideUp();
+                $("#"+id).slideDown();
+            }
+            
+        }
+        
+    $(document).ready(function() {
+        
+        
+        function renderPageData (){
+            var propertyDetails = getPropertyDetails();
+            renderPropertyLogo('#logo_template','#site_logo',propertyDetails);
+            renderPropertyFooter('#footer_template','#footer_container',propertyDetails);
+            renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
+            
+            
+        }
+        
+      
+        function renderPropertyLogo(logo_template,site_logo,propertyDetails){
+            var item_list = [];
+            var item_rendered = [];
+            var logo_template_html = $(logo_template).html();
+            Mustache.parse(logo_template_html);   // optional, speeds up future uses
+            item_list.push(propertyDetails);
+            $.each( item_list , function( key, val ) {
+                val.alt_site_logo = getImageURL(val.site_logo);
+                var logo_rendered = Mustache.render(logo_template_html,val);
+                item_rendered.push(logo_rendered);
+            });
+            $(site_logo).show();
+            $(site_logo).html(item_rendered.join(''));
+        }
+        
+        function renderPropertyFooter(footer_template,footer_container,propertyDetails){
+            var item_list = [];
+            var item_rendered = [];
+            var footer_template_html = $(footer_template).html();
+            Mustache.parse(footer_template_html);   // optional, speeds up future uses
+            item_list.push(propertyDetails);
+            $.each( item_list , function( key, val ) {
+                var footer_rendered = Mustache.render(footer_template_html,val);
+                item_rendered.push(footer_rendered);
+            });
+            $(footer_container).show();
+            $(footer_container).html(item_rendered.join(''));
+        }
+        
+        // function getImageURL(existing_url){
+        //     if(!existing_url ||  existing_url.indexOf('missing.png') > -1 || existing_url.length === 0){
+        //         //http://css-tricks.com/snippets/html/base64-encode-of-1x1px-transparent-gif/
+        //         return "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+                
+        //     }
+        //     return "http://cdn.mallmaverickstaging.com"+existing_url;
+        // }
+        
+        
+        loadMallData(renderPageData);  
+        
+        //real time search
+        $('#search_input').keyup(function(e){
+            showSearchResults();
+        });
+
+        $('#search_input').on('input', function() {
+            showSearchResults();
+        });
+            
+            
+        function showSearchResults(){
+            $('#search_results').show();
+            if($('#search_input').val().length == 0){
+                $('#search_results').hide();
+            }else{
+                var search_results = getSearchResults($('#search_input').val(),10,100);
+                $('.search-results-count').html(search_results.summary.count);
+                renderSearchResultsTemplate('#search_results_template','#search_results_items',search_results);
+                // $(document).i18n();
+            }
+        }
+        
+        $('.close-search').click(function(){
+            $('#search_results').hide();
+        });
+            
+        $('#search_results_mobile').hide();
+        $('#search_input_mobile').on('input', function() {
+            $('#search_results_mobile').show();
+            if($('#search_input_mobile').val().length == 0){
+                var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
+                renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+                $(document).i18n();
+                $('#search_results_mobile').hide();
+            }else{
+                var search_results = getSearchResults($('#search_input_mobile').val(),10,100);
+                $('.search-results-count').html(search_results.summary.count);
+                //console.log('--------');
+                renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+                $(document).i18n();
+                //console.log(getSearchResults($('#search_input').val(),100));
+            }
+        });
+            
+        $('.close-search-mobile').click(function(){
+            var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
+            renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+            $(document).i18n();
+            $('#search_input_mobile').val('')
+        });
+    
+    });
+    
+</script>
