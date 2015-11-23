@@ -4,7 +4,11 @@
             bottom:-15px !important;
         }
     }
-    
+    .hgroup.centered h2 {
+    margin: 0;
+    color: green;
+    font-weight: bold;
+}
 hr {
        border-top: 1px solid #cccccc;
 }
