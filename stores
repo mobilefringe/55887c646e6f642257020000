@@ -93,7 +93,7 @@ a:hover {
      <div class="container">
           <section class="hgroup centered store_directory_hgroup">
                <h1>Store Directory</h1>
-              <h2><a href="http://cdn.mallmaverick.com/system/site_images/photos/000/003/965/original/NorthPark_Center_Directory_Nov15.pdf?1446671563">Download Store Directory</a></h2>
+              <h2><a href="http://cdn.mallmaverick.com/system/site_images/photos/000/003/965/original/NorthPark_Center_Directory_Nov15.pdf?1446671563" style="color:green">Download Store Directory</a></h2>
                <ul class="breadcrumb pull-right">
                     <li><a href="/home">Home</a> </li>
                     <li class="active">Store Directory</li>
