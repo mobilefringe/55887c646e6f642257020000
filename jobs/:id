@@ -1,0 +1,232 @@
+<style>
+    .promo_desc_box{
+        vertical-align:bottom;
+        margin-bottom:20px;
+    }
+    .promo_image_div{
+        margin-bottom:20px;
+    }
+    
+    .promo_inside_content{
+        border-bottom:0;
+    }
+    .btn-primary {
+    background: #299E48 !important;
+    border-color: #cccccc !important;
+    text-align: center;
+    color: white !important;
+    font-weight: bold !important;
+}
+h3{
+    font-size: 12px;
+}
+</style>
+
+<div class="main">
+     <div class="container" id="promo_container">
+        <script id="promo_template" type="x-tmpl-mustache/text">
+          <section class="hgroup">
+               <h1><strong>{{job_type}} : {{name}}</strong></h1>
+               <h2 style="color:black">{{store_name}}</h2>
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/home">Home</a> </li>
+                    <li><a href="/promotions">Promotions</a> </li>
+                    <li class="active">{{name}}</li>
+                    
+               </ul>
+          </section>
+          <section>
+     
+ <div class="row">
+                    <div class="col-sm-8 col-md-8">
+            <div class="promo_list_div" id="promo_container">
+                
+                    
+                        <div class="promo_desc_box">
+                           
+                           
+                           
+                        </div>
+                        {{{rich_description}}}
+                        
+                       
+                        </div>
+                        
+                        
+
+                    </div>
+                      <div class="col-sm-4 col-md-4">
+            
+            <div id="centre_info_container">
+                
+                    <br><img src="{{image}}">
+           <br><br> 
+           <p id="contact_datee">
+            <strong>Closing Date: </strong>{{dates}}
+            </p>
+            <p id="contact_name">
+                        
+                        <strong>Contact Name: </strong>{{contact_name}}
+                        </p>
+                        <p id="contact_phone">
+                        <strong>Contact Phone: </strong>{{contact_phone}}
+                        </p>
+                        <p id="contact_email">
+                        <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be65401194c0196653f1724001d4e1fa/envelope4 2.png">&nbsp;<strong></strong>{{contact_email}}
+                        </p>
+   <h5><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a35f08cc84c593929aa6fba61ad07430/calendar52.png" style="padding-right:5px;">{{dates}}<a href="http://www.facebook.com/sharer.php?u=http://twinpinesmall.kodekloud.io/promotions/{{slug}}" target="_blank">
+                <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1443473069000/Facebook 2.png" style="float:right">
+            </a>
+            <a href="http://twitter.com/share?text=Check%20out%20the%20promotions%20at%20Twinpines%20Mall%20&url=http://http://twinpinesmall.kodekloud.io/{{slug}}">
+                <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1443473073000/Twitter 2.png"
+                style="float:right">
+            </a></h5> 
+                
+            </div>
+            
+            
+        </div>
+                </script>
+            </div>  
+        </div>
+         
+   
+
+<script>
+    $(document).ready(function() {
+        function renderAll (){
+            var propertyDetails = getPropertyDetails();
+            renderPageData('#centre_info_container','#centre_info_template',propertyDetails, 'property_details')
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            job_details = getJobDetailsBySlug(slug);
+            renderPageData('#breadcrumb_container','#breadcrumb_template',job_details, 'promo_details')
+            renderPageData('#banner_container','#banner_template',job_details, 'promo_details')
+            render_page_details("#promo_container", "#promo_template", job_details,'jobs')
+  
+            $("#loading_screen").hide();
+            $("#main_content").show();
+        }
+        
+    
+        function renderPageData(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "property_details" || type == "promo_details"){
+                item_list.push(collection);
+                collection = []
+                collection = item_list;
+            }
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+    
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };
+        
+        function render_page_details(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);
+            $.each( item_list , function( key, val ) {
+                console.log(val)
+
+                if (val.jobable_type == "Store") {
+                    var store_details = getStoreDetailsByID(val.jobable_id);
+    
+                    val.store_detail_btn = store_details.slug 
+                    val.store_name = store_details.name
+                    if(!store_details.store_front_url ||  store_details.store_front_url.indexOf('missing.png') > -1 || store_details.store_front_url.length === 0){
+                        val.image = "http://assets.codecloudapp.com/sites/556628266e6f640eb3000000/d52d75490b904799149bedd8a0f02ffe/storedetail_default.jpg"    
+                     } else {
+                           val.image = getImageURL(store_details.store_front_url);    
+                       }
+                    
+                    
+                } 
+                
+                
+                
+                end = new Date (val.end_date);
+                
+                end.setDate(end.getDate()+1);
+                val.dates = get_month(end.getMonth())+" "+end.getDate();
+                
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+                
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            if (collection.jobable_type == "Store"){
+                $("#store_btn").show();
+            }
+            if (collection.contact_name == ""){
+                $("#contact_name").hide()
+            }
+            if (collection.contact_phone == ""){
+                $("#contact_phone").hide()
+            }
+            if (collection.contact_email == ""){
+                $("#contact_email").hide()
+            }
+        }
+        
+        function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+        
+
+        loadMallData(renderAll);  
+
+    
+  
+    });
+    
+</script>
