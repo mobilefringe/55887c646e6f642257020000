@@ -74,10 +74,10 @@ h3{
                         <p id="contact_email">
                         <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be65401194c0196653f1724001d4e1fa/envelope4 2.png">&nbsp;<strong></strong>{{contact_email}}
                         </p>
-   <h5>
+   <h5><a href="http://www.facebook.com/sharer.php?u=http://twinpinesmall.kodekloud.io/jobs/{{slug}}" target="_blank">
                 <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1443473069000/Facebook 2.png" >
             </a>
-            <a href="http://twitter.com/share?text=Check%20out%20the%20promotions%20at%20Twinpines%20Mall%20&url=http://http://twinpinesmall.kodekloud.io/{{slug}}">
+            <a href="http://twitter.com/share?text=Check%20out%20the%20promotions%20at%20Twinpines%20Mall%20&url=http://http://twinpinesmall.kodekloud.io/jobs/{{slug}}">
                 <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1443473073000/Twitter 2.png"
                 >
             </a></h5> 
