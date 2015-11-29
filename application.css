@@ -1825,6 +1825,19 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.danger:hover > th {
   background-color: #ebcccc;
 }
+@media only screen and (max-width: 767px) {
+.page-photo img{
+    height: 300px;
+    top: 0px !important;
+    display: none;
+}
+}
+@media (max-width: 991px) {
+    .page-mobile-only img{
+        display:block !important;
+        width:100%;
+    }
+
 @media (max-width: 767px) {
     .footer_text{
         width:auto !important;
