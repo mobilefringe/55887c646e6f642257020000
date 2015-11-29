@@ -9,7 +9,7 @@
 }
 }
 @media (max-width: 991px) {
-    .page-mobile-only {
+    .page-mobile-only img{
         display:block !important;
         width:100%;
     }
