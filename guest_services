@@ -7,6 +7,12 @@
     top: 0px !important;
     display: none;
 }
+}
+@media (max-width: 991px) {
+    .page-mobile-only {
+        display:block !important;
+        width:100%;
+    }
 </style>
 
 <div class="full_page_photo" style="background-image: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000/53474ff33375da704f40395b39c54e54/guest_servicebanner.png);">
@@ -30,6 +36,9 @@
           </section>
     <div class="inside_page_content">
         <div class="left_column">
+        <div class="page-mobile-only">
+                    <br><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/53474ff33375da704f40395b39c54e54/guestservice.png">
+     </div>
       <p><span><br>Allow our trained service professionals help you get the most out of your visit. Simply stop by our Guest Services kiosk, conveniently located at the north side of the property, (near Marshalls) in the Guest Services Building. Or, call us at 905-687-6777.</span></p>
 
 <p><span>&nbsp;</span></p>
