@@ -77,8 +77,9 @@
             
             <div id="centre_info_container">
                 <script id="centre_info_template" type="x-tmpl-mustache/text">
-                    <br><img style="page_photo" src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/53474ff33375da704f40395b39c54e54/guestservice.png">
-         
+                <div class="page_photo">
+                    <br><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/53474ff33375da704f40395b39c54e54/guestservice.png">
+         </div>
    
                 </script>
             </div>
