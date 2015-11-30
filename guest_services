@@ -8,7 +8,7 @@
     display: none;
 }
 }
-@media only screen (max-width: 768px) {
+@media only screen  {
     .page-mobile-only img{
         display:block !important;
         width:100%;
