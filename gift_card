@@ -1,3 +1,25 @@
+<style>
+    @media only screen and (min-width: 768px) {
+  /* Add your Desktop Styles here */
+	.desktop-only {
+		display: block !important;
+	}
+	.mobile-only {
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+  /* Add your Mobile Styles here */
+	.desktop-only {
+		display: none !important;
+	}
+	.mobile-only {
+		display: block !important;
+	}
+}
+</style>
+
+
 <div class="full_page_photo" style="background-image: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a00b3dc0e46fee3bcf45dc7d3f737518/giftcardbanner.png);">
      <div class="container">
           <!-- <section class="call_to_action">
@@ -19,6 +41,10 @@
           </section>
     <div class="inside_page_content">
         <div class="left_column">
+        <div class="mobile-only">
+                    <br><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a00b3dc0e46fee3bcf45dc7d3f737518/gitftcard.png">
+           <br><br> <center> <a href="http://www.getmybalance.com" target="_blank"><button id="submit" class="btn btn-primary" type="submit">Check Your Gift Card Balance</button></a></center>
+   </div>
       <h3>GIFT GIVING JUST GOT FABULOUS!</h3> 
 <p>Be the best gift giver with the Twin Pine Mall a gift card. Available for purchase in denominations of $5 to $500 at Guest Services.</p>
 
@@ -40,9 +66,10 @@ The Outlet Collection at Niagara Gift Card is redeemable at most of our stores a
             
             <div id="centre_info_container">
                 <script id="centre_info_template" type="x-tmpl-mustache/text">
+                <div class="desktop-only">
                     <br><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a00b3dc0e46fee3bcf45dc7d3f737518/gitftcard.png">
            <br><br> <center> <a href="http://www.getmybalance.com" target="_blank"><button id="submit" class="btn btn-primary" type="submit">Check Your Gift Card Balance</button></a></center>
-   
+   </div>
                 </script>
             </div>
             
