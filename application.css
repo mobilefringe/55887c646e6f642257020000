@@ -34,7 +34,25 @@ html {
     src: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000//1386798364000/GothamMedium.ttf);
     font-weight:500;
 }
-
+@media only screen and (min-width: 768px) {
+  /* Add your Desktop Styles here */
+	.desktop-only img{
+		display: block !important;
+	}
+	.mobile-only img{
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+  /* Add your Mobile Styles here */
+	.desktop-only img{
+		display: none !important;
+	}
+	.mobile-only img{
+		display: block !important;
+		width:100%;
+	}
+}
 
 body {
   margin: 0;
