@@ -8,9 +8,9 @@
     display: none;
 }
 }
-@media only screen  {
+@media only screen and (max-width: 768px) {
     .page-mobile-only img{
-        display:block !important;
+        display:none !important;
         width:100%;
     }
 </style>
