@@ -52,6 +52,10 @@ html {
 		display: block !important;
 		width:100%;
 	}
+	
+	#search_wrapper{
+	    display:none;
+	}
 }
 
 body {
