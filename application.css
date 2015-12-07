@@ -333,6 +333,7 @@ th {
     margin:0;
     padding-left:10px;
     color:black;
+    border: solid 1px #efefef;    
 }
 
 .search_button{
