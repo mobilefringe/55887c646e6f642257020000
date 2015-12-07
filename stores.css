@@ -55,7 +55,7 @@ a:hover {
     border: 1px solid #cccccc;
 }
 
-.job_count {
+p.job_count {
     padding-left:0px !important;
 }
 
