@@ -60,7 +60,7 @@
                                    <h3><a href="../stores/{{slug}}">{{name}}</a></h3>
                                    <a href="tel:{{phone}}"><p class="directory_content directory_phone_col"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/14c4e580b98e351a243ce8245fbcc446/telephone66 2.png">&nbsp;{{phone}}</a></p>
                                   {{#jobs.length > 0}}
-                                    <p><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1449267385000/suitcase24.png" />{{jobs.length}}</p>
+                                    <p><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1449267385000/suitcase24.png" />{{/jobs.length}}</p>
                                   {{/jobs.length}}
                               </div>
                                
