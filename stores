@@ -64,6 +64,12 @@
                                         <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1449267385         000/suitcase24.png" />{{jobs.length}}
                                     </p>
                                   {{/jobs.length}}
+                                  {{#promotions.length}}
+                                    <p>
+                                        <img src="" />{{promotions.length}}
+                                    </p>
+                                  {{/promotions.length}}
+                                  
                               </div>
                                
                          </div>
