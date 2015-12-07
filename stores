@@ -66,7 +66,7 @@
                                   {{/jobs.length}}
                                   {{#promotions.length}}
                                     <p>
-                                        <img src="" />{{promotions.length}}
+                                        <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1449267390000/tag32.png" />{{promotions.length}}
                                     </p>
                                   {{/promotions.length}}
                                   
