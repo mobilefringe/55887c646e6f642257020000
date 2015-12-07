@@ -55,8 +55,8 @@ a:hover {
     border: 1px solid #cccccc;
 }
 
-p.job_count {
-    padding-left:0px !important;
+.portfolio_description div{
+    display:inline-block;
 }
 
 @media only screen and (max-width: 767px) 
