@@ -54,6 +54,11 @@ a:hover {
    
     border: 1px solid #cccccc;
 }
+
+.job_count {
+    padding-left:0px !important;
+}
+
 @media only screen and (max-width: 767px) 
 {
 .portfolio_strict .portfolio_item .portfolio_description p {
