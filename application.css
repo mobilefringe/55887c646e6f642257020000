@@ -321,6 +321,13 @@ th {
     height:50px;
 }
 
+#search_wrapper {
+    top: 0px;
+    position: absolute;
+    right: 211px;
+    background-color:#efefef;
+}
+
 .search_input{
     height:49px;
     border:none;
