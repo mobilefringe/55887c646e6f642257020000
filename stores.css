@@ -57,6 +57,11 @@ a:hover {
 
 .portfolio_description div{
     display:inline-block;
+    padding:0 5px;
+}
+
+.portfolio_description div img{
+    padding:0 2px;
 }
 
 @media only screen and (max-width: 767px) 
