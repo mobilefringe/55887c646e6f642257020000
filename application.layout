@@ -370,7 +370,7 @@
                </div>
           </div>
     
-          <div id="search_wrapper" class="visible-lg-block">
+          <div id="search_wrapper" class="visible-lg-*">
             <div style="height:30px">
                 <label for="search_input" style="display:none">Search</label>
                 <input style="color:black;width:265px" type="text" id="search_input" class="search_input" placeholder="Search"><button class="search_button"><img alt="Search" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/70483e4f30054855ef30b8872dc7948d/icon_search.png"/></button>
