@@ -341,7 +341,7 @@ th {
 }
 
 .search_input{
-    height:49px;
+    height:50px;
     border:none;
     margin:0;
     padding-left:10px;
@@ -350,7 +350,7 @@ th {
 }
 
 .search_button{
-    height:50px;
+    height:49px;
     border:none;
     margin:0;
     /*position:absolute;*/
