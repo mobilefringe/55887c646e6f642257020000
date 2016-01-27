@@ -362,7 +362,8 @@ th {
 }
 
 .search_input:focus{
-    outline:none
+    outline:none;
+    border-color:#000;
 }
 .search-results{
     
