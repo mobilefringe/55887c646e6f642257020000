@@ -28,7 +28,7 @@
 <!-- jQuery Version 1.11.0 -->
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
-<script src="//assets.codecloudapp.com/sites/55887c646e6f642257020000/application/x-javascript/1453933686000/jquery.simplyscroll.min.js"></script>
+<script src="//s3.amazonaws.com/kodekloud/sites/55887c646e6f642257020000/application/x-javascript/1336749994000/jquery.simplyscroll.min.js"></script>
 <!--Mustache is a client side templating engine https://github.com/janl/mustache.js/ -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
 <!--jReject is used to warn users certain browsers aren't compatible with this site-->
