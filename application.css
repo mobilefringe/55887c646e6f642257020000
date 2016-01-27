@@ -362,7 +362,7 @@ th {
 }
 
 .search_input:focus{
-    outline:1px solid #C0C0C0;
+    outline:none
 }
 .search-results{
     
