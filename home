@@ -200,7 +200,7 @@ img {
     
     $(document).ready(function() {
    
-       $("#socialize_social_icons").simplyScroll();
+       
                 
         function renderPageData (){
             var repoList = getRepoList();
