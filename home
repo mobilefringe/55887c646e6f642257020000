@@ -216,6 +216,7 @@ img {
             renderFeatureItems('#feature_template', '#feature_items', featureList)
             renderPropertyDescription('#description_template','#description_section', propertyDetails )
             $("#feature_items > :nth-child(3n)").css("margin-right","0");
+            $("#socialize_social_icons").simplyScroll();
         }
         
         function renderPropertyDescription(description_template, description_section, propertyDetails){
