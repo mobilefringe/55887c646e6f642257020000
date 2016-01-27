@@ -1,0 +1,344 @@
+<style scoped>
+    h3 {
+        margin-top:0 !important;
+        text-transform:uppercase;
+        font-weight:400 !important;
+    }
+    .feature_title{
+        text-align:left;
+    }
+    .portfolio_strict .portfolio_item .portfolio_description p {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-left: 120px !important;
+}
+    .portfolio_description a{
+        color:#299E48;
+        font-weight:bold;
+    }
+    img {
+    max-width: 100%;
+    margin-left: 25px;
+}
+    .col-md-3 {
+    width: 32%;
+    margin-left: 11px;
+}
+hr {
+       border-top: 1px solid #cccccc;
+}
+@media (max-width: 768px) {
+  .col-md-3 {
+    width: 100%;
+    
+}
+img {
+    max-width: 100%;
+    
+}
+}
+    .portfolio_strict .portfolio_item figure figcaption p {
+    padding: 10px 20px;
+    color: #aaa;
+    font-weight: 300;
+    font-size: 13px;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    timing-function: cubic-bezier(0.25, 0.25, 0.115, 1.445);
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0.25, 0.115, 1.445);
+    opacity: 0;
+    display: none !important;
+}
+.section_header.fancy small {
+    clear: both;
+    display: block;
+    text-transform: none;
+    font-size: 16px;
+    padding-top: 20px;
+    font-weight: 300;
+}
+.section_header.fancy {
+    position: relative;
+    font-size: 28px;
+    line-height: 26px;
+    text-align: left;
+    text-transform: none;
+    padding: 36px 0 26px 0;
+    margin: 0 0 26px 0;
+    font-weight: 700;
+}
+.portfolio_description {
+    padding-top:20px;
+}
+.navbar .nav li a:hover, .navbar .nav li a:active {
+
+    border-bottom: solid 1px #389e47;
+    
+}
+</style>
+<section id="slider_wrapper" class="slider_wrapper">
+     <div id="main_flexslider" class="flexslider">
+          <ul class="slides" id="home_banner">
+          
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                 
+               <li class="item">
+                <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                    <img src="{{image_url}}"/>
+                    </a>
+               </li>
+              
+            </script>
+          </ul>
+     </div>
+</section>
+ <section class="call_to_action">
+    <div id="todays_hours_container">
+        <script id="todays_hours_template" type="x-tmpl-mustache/text">
+            <h3>Today's Hours: {{h}}</h3>
+            <h4>Good Friday (Apr): Closed</h4>
+            <a class="btn btn-primary btn-lg" href="/hours">More hours</a></section>
+        </script>
+    </div>
+<!--<section class="call_to_action" id="description_section">-->
+<!--    <script id="description_template" type="x-tmpl-mustache/text">-->
+<!--        </br>-->
+<!--       <h3 class="site_welcome_msg">{{welcome_message}}</h3>-->
+<!--       <h4 class="site_description">{{description}}</h4>-->
+<!--    </script>-->
+<!--</section>-->
+<!--the welcome box colour : #98add0 (outside)   #d2d9e9 (inside)-->
+<div class="main">
+     <div class="container">
+            
+          <section class="portfolio_teasers_wrapper">
+               <!--<h2 class="section_header fancy centered">Recent Work or Projects from Portfolio<small>we take pride in our work</small></h2> -->
+               <div class="portfolio_strict row" id="feature_items">
+                    <script id="feature_template" type="x-tmpl-mustache/text">
+                    <div class="col-sm-4 col-md-4">
+                    <div class="portfolio_description">
+                                   <h3 ><a style="color:black" href="http://{{url}}">{{name}}</a></h3>
+                              </div>
+                         <div class="portfolio_item wow animated flipInX"> <a href="http://{{url}}" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                              <figure style="background-image:url('{{image_url}}')">
+                                   <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                        <!-- <path d="M 180,0 0,0 0,0 180,0 z"/> -->
+                                   </svg>
+                                   <figcaption>
+                                        <!-- <p>{{description}}</p> -->
+                                        <div class="view_button">View</div>
+                                   </figcaption>
+                              </figure>
+                              </a>
+                              
+                         </div>
+                    </div>
+                    </script>
+                
+               </div>
+          </section>
+         <section class="portfolio_teasers_wrapper">
+          <h2 class="section_header fancy centered">Upcoming Promotions & Events!<small>Don't miss our exclusive deals</small></h2>
+               <div class="portfolio_strict row">
+               <!--<h2 class="section_header fancy centered">Recent Work or Projects from Portfolio<small>we take pride in our work</small></h2> -->
+               <div class="portfolio_strict row" id="promo_items">
+                    <script id="promo_template" type="x-tmpl-mustache/text">
+                                   <div class="col-sm-3 col-md-3">
+                    <div class="portfolio_item wow animated flipInX"> 
+                        <a href="../promotions/{{slug}}" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                            <figure style="background-image:url('{{alt_promo_image_url}}')">
+                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                    <path d="M 180,0 0,0 0,0 180,0 z"/>
+                                </svg>
+                                <figcaption>
+                                    <p>{{description}}</p>
+                                    <div class="view_button">{{store_name}}</div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="portfolio_description">
+                            <span><a href="../promotions/{{slug}}">{{name}}</a></span>
+                            
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                    </script>
+                
+               </div>
+          </section>
+          <section>
+              
+             <br>
+             <h2 class="section_header fancy centered">Visit Our Great Stores</h2>
+             
+             <div class="socialize_div">
+
+            <ul class="socialize_social_icons">
+                <a href="https://instagram.com/thebaycentre/" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aldo.jpg" width="200" class="social_icon" alt="instagram" id="social_instagram" ></a>
+                <a href="https://www.facebook.com/thebaycentre" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/amaya.jpg" width="200" class="social_icon" alt="facebook" id="social_facebook"></a>
+                <a href="https://twitter.com/baycentrevic" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aldoaccessories.jpg" width="200" class="social_icon" alt="twitter" id="social_twitter"></a>
+                <a href="https://www.youtube.com/user/thebaycentre" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aeropostale.jpg" width="200" class="social_icon" alt="youtube" id="social_youtube"></a>
+                <a href="" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/access.jpg" width="200" class="social_icon" alt="blog" id="social_blog" ></a>
+            </ul>
+</div>
+          </section>
+          <!-- <section class="clients_section wow animated fadeInUp">
+               <h2 class="section_header elegant centered">Our clients<small>all of them are satisfied</small></h2>
+               <div class="clients_list"> <a href="#"><img src="images/clients/wordpress.jpg" alt="client"></a> <a href="#"><img src="images/clients/jquery.jpg" alt="client"></a> <a href="#"><img src="images/clients/microlancer.jpg" alt="client"></a> <a href="#"><img src="images/clients/bbpress.jpg" alt="client"></a> <a href="#"><img src="images/clients/wpml.jpg" alt="client"></a> </div>
+          </section> -->
+     </div>
+</div>
+<script>
+    
+    $(document).ready(function() {
+   
+       
+                
+        function renderPageData (){
+            var repoList = getRepoList();
+            var featureList = getFeatureList();
+            var propertyDetails = getPropertyDetails();
+            var promotions = getPromotionsList();
+            promotions = promotions.slice(0,3);
+            var banners = getBanners()
+            var hours = getTodaysHours()
+            renderTemplate('#promo_items','#promo_template',promotions);
+            renderLayoutHours('#todays_hours_container', '#todays_hours_template', hours);
+            renderBanner('#banner_template','#home_banner',banners);
+            renderFeatureItems('#feature_template', '#feature_items', featureList)
+            renderPropertyDescription('#description_template','#description_section', propertyDetails )
+            $("#feature_items > :nth-child(3n)").css("margin-right","0");
+        }
+        
+        function renderPropertyDescription(description_template, description_section, propertyDetails){
+            var item_list = [];
+            var item_rendered = [];
+            var description_template_html = $(description_template).html();
+            Mustache.parse(description_template_html);   // optional, speeds up future uses
+            item_list.push(propertyDetails);
+            $.each( item_list , function( key, val ) {
+                var description_rendered = Mustache.render(description_template_html,val);
+                item_rendered.push(description_rendered);
+            });
+            $(description_section).show();
+            $(description_section).html(item_rendered.join(''));
+        }
+        
+        function renderBanner(banner_template,home_banner,banners){
+            var item_list = [];
+            var item_rendered = [];
+            var banner_template_html = $(banner_template).html();
+            Mustache.parse(banner_template_html);   // optional, speeds up future uses
+            $.each( banners , function( key, val ) {
+                today = new Date;
+                start = new Date (val.start_date);
+               
+                start.setDate(start.getDate());
+               if(val.url == "" || val.url === null){
+                   val.css = "style=cursor:default;";
+                   val.noLink = "return false";
+               }
+               if (start <= today){
+                 if (val.end_date){
+                     end = new Date (val.end_date);
+                     end.setDate(end.getDate() + 1);
+                     if (end >= today){
+                       item_list.push(val);  
+                     }
+                     
+                 } else {
+                     item_list.push(val);
+                 }
+               
+                
+               }
+            });
+
+            $.each( item_list , function( key, val ) {
+                var repo_rendered = Mustache.render(banner_template_html,val);
+                item_rendered.push(repo_rendered);
+               
+            });
+            
+            $(home_banner).show();
+            $(home_banner).html(item_rendered.join(''));
+            $('.item').first().addClass('active');
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: true,
+                directionNav: true,        
+                prevText: "",
+                nextText: ""
+            });
+        }
+        
+        function renderTemplate(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            $.each( collection , function( key, val ) {
+                if ((val.promo_image_url_abs).indexOf('missing.png') > -1){
+                    if (val.promotionable_type == "Store") {
+                        var store_details = getStoreDetailsByID(val.promotionable_id);
+                        val.alt_promo_image_url = (store_details.store_front_url_abs);
+                        val.store_name = store_details.name
+                    } else {
+                        val.alt_promo_image_url = "http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/dcd66cb0efbccf1a9dc76822e0b9da23/logo_10dundas.png"
+                    }
+                    
+                } else {
+                    val.alt_promo_image_url = (val.promo_image_url_abs);
+                    if (val.promotionable_type == "Store") {
+                        var store_details = getStoreDetailsByID(val.promotionable_id);
+                        val.store_name = store_details.name
+                    }
+
+                }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+                
+                
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            
+        }
+        
+        
+        
+        function renderFeatureItems(feature_template,feature_items,featureList){
+            var item_list = [];
+            var item_rendered = [];
+            var feature_template_html = $(feature_template).html();
+            Mustache.parse(feature_template_html);   // optional, speeds up future uses
+            count = 0
+            $.each( featureList , function( key, val ) {
+                if (count < 3){
+                val.alt_url = val.image_url;
+                var featureitem_rendered = Mustache.render(feature_template_html,val);
+                item_rendered.push(featureitem_rendered);
+                count = count + 1    
+                }
+                
+               
+            });
+            
+           
+            $(feature_items).show();
+            $(feature_items).html(item_rendered.join(''));
+        }
+        
+
+        
+        loadMallData(renderPageData);
+    });
+    </script>
