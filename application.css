@@ -360,6 +360,10 @@ th {
     margin-left: 0;
     padding: 0 10px;
 }
+
+.search_input:focus{
+    outline:red;
+}
 .search-results{
     
 }
