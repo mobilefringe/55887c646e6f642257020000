@@ -182,7 +182,7 @@ img {
              <div class="socialize_div">
 
             <ul id="socialize_social_icons">
-                <li><a href="https://instagram.com/thebaycentre/" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aldo.jpg" width="200" class="social_icon" alt="instagram" id="social_instagram" ></a></li>
+                <li><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aldo.jpg" width="200" class="social_icon" alt="instagram" id="social_instagram" ></li>
                 <li><a href="https://www.facebook.com/thebaycentre" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/amaya.jpg" width="200" class="social_icon" alt="facebook" id="social_facebook"></a></li>
                 <li><a href="https://twitter.com/baycentrevic" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aldoaccessories.jpg" width="200" class="social_icon" alt="twitter" id="social_twitter"></a></li>
                 <li><a h<li>ref="https://www.youtube.com/user/thebaycentre" target="_blank"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/be49069aa06a16566285640e72d24ef2/aeropostale.jpg" width="200" class="social_icon" alt="youtube" id="social_youtube"></a></li>
