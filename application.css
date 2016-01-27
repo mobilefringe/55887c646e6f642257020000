@@ -274,6 +274,10 @@ th {
     margin:20px;
 }
 
+.simply-scroll .simply-scroll-clip, .simply-scroll{
+    width:100%;
+}
+
 #pop-over-map-name{
    color:#FFF;
    padding:0px;
