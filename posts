@@ -3,7 +3,7 @@
           <section class="hgroup">
                <h1>Blog</h1>
                <ul class="breadcrumb pull-right">
-                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="/">Home</a> </li>
                     <li class="active">Blog</li>
                </ul>
           </section>
