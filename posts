@@ -1,40 +1,40 @@
 <div class="main">
-     <div class="container">
-          <section class="hgroup">
-               <h1>Blog</h1>
-               <ul class="breadcrumb pull-right">
-                    <li><a href="/">Home</a> </li>
-                    <li class="active">Blog</li>
-               </ul>
-          </section>
+    <div class="container">
+        <section class="hgroup">
+            <h1>Blog</h1>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a> </li>
+                <li class="active">Blog</li>
+            </ul>
+        </section>
           <section>
-               <div class="row">
-                    <div id="leftcol" class="col-sm-8 col-md-8">
-                         <article class="post">
-                              <div class="post_header">
-                                   <h3 class="post_title">
-                                        <a href="single_post.html">Fugiat dapibus,ut fermentum mas justo sitters amet risus.</a>
-                                    </h3>
-                                   <div class="post_sub"><i class="fa fa-calendar"></i> March 1, 2013 </div>
-                              </div>
-                              <div class="post_content">
-                                   <figure><a href="single_post.html"><img alt="0" src="images/portfolio/p4.jpg"></a></figure>
-                                   <p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets....</p>
-                                   <a href="single_post.html" class="btn btn-primary">Read More</a> </div>
-                         </article>
-                    </div>
-                    <div id="sidebar" class="col-sm-4 col-md-4">
-                         <aside class="widget">
-                              <h4>Blog Categories</h4>
-                              <ul class="nav nav-pills nav-stacked">
-                                   <li class="active"><a href="#">All</a></li>
-                                   <li><a href="#">News</a></li>
-                                   <li><a href="#">Press</a></li>
-                              </ul>
-                         </aside>
-                    </div>
-               </div>
-          </section>
-     </div>
-    
+            <div class="row">
+                <div id="leftcol" class="col-sm-8 col-md-8">
+                    <article class="post">
+                        <div class="post_header">
+                            <h3 class="post_title">
+                                <a href="single_post.html">Fugiat dapibus,ut fermentum mas justo sitters amet risus.</a>
+                            </h3>
+                            <div class="post_sub"><i class="fa fa-calendar"></i> March 1, 2013 </div>
+                        </div>
+                        <div class="post_content">
+                            <figure><a href="single_post.html"><img alt="0" src="images/portfolio/p4.jpg"></a></figure>
+                                <p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets....</p>
+                            <a href="single_post.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                <div id="sidebar" class="col-sm-4 col-md-4">
+                    <aside class="widget">
+                        <h4>Blog Categories</h4>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">All</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
