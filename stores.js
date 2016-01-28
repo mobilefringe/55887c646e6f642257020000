@@ -32,12 +32,7 @@ function renderAll(){
         $(this).addClass('active_cat');
         var rows = $('.cats_row');
         rows.show();
-        $.each($('.store_initial'), function(i, val){
-           if ($(val).text().length > 0){
-               $(val).show();
-           } 
-        });
-        $('#cat_name').hide();
+        
         e.preventDefault();
     });
 }
