@@ -25,6 +25,7 @@ function renderAll(){
                 $(val).show();
             }
         });
+        $('html,body').animate( { scrollTop:$('#store_list').offset().top } , 500);
         e.preventDefault();
     });
     $('#show_all_stores').click(function(e){
@@ -32,6 +33,7 @@ function renderAll(){
         $(this).addClass('active_cat');
         var rows = $('.cats_row');
         rows.show();
+        $('html,body').animate( { scrollTop:$('#store_list').offset().top } , 500);
         e.preventDefault();
     });
 }
