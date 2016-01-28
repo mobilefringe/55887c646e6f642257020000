@@ -27,6 +27,19 @@ function renderAll(){
         });
         e.preventDefault();
     });
+    $('.show_all_stores').click(function(e){
+        $('.active_cat').removeClass('active_cat');
+        $(this).addClass('active_cat');
+        var rows = $('.cats_row');
+        rows.show();
+        $.each($('.store_initial'), function(i, val){
+           if ($(val).text().length > 0){
+               $(val).show();
+           } 
+        });
+        $('#cat_name').hide();
+        e.preventDefault();
+    });
 }
 
 
