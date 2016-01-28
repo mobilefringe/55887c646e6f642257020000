@@ -40,7 +40,7 @@ h3{
  <div class="row">
                     <div class="col-sm-8 col-md-8">
             <div class="promo_list_div" id="promo_container">
-                
+                    <img class="show_phone" src="{{image}}">
                     
                         <div class="promo_desc_box">
                            
