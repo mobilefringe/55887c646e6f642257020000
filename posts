@@ -24,7 +24,7 @@
                         </div>
                     </article>
                     <input type="hidden" value="1" id="num_loaded" />
-                    <p class="new_store_subheading text-center hidden_now hstc" id = all_loaded>NO MORE POSTS</p>
+                    <p class="new_store_subheading text-center hidden_now hstc" id="all_loaded">NO MORE POSTS</p>
                     <p class="text-center" id="loaded_posts">
                         <a href="#" class="new_store_subheading hstc" id="load_more_posts">
                             LOAD MORE POSTS
