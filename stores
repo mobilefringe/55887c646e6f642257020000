@@ -27,7 +27,7 @@
             
 
 </div>
-<div class="main">
+<div class="main" id="store_list">
      <div class="container">
           <section class="hgroup centered store_directory_hgroup">
                <h1>Store Directory</h1>
