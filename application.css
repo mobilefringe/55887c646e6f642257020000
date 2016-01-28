@@ -344,6 +344,15 @@ th {
     height:50px;
 }
 
+#search_results{
+    width: 314px;
+}
+
+#search_results .list-group{
+    z-index: 99999;
+    position: absolute;
+}
+
 #search_wrapper {
     top: 0px;
     position: absolute;
