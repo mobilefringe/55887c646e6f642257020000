@@ -288,6 +288,10 @@ th {
     background: #fff !important;
 }
 
+.btn-primary.active_cat:hover{
+    color: #299E48 !important;
+    background: #fff !important;
+}
 
 #pop-over-map-name{
    color:#FFF;
