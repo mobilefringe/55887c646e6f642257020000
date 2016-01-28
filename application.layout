@@ -413,62 +413,7 @@ with sales of over $1,300 per square foot.</br>
                     </div>
                  </div>
                  <div class="footer_teaser col-sm-4 col-md-4">
-                    <div class="search-results" id="search_results" style="display:none">
-                        <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
-                        <script id="search_results_template" type="x-tmpl-mustache/text">{% raw %}
-                        <h4 class="list-group-item header" style="{{stores_header_style}}" data-i18n="nav.stores"></h4>
-                        {{#stores}}
-                            <a href="/stores/{{slug}}" class="list-group-item">
-                                <div class="name">{{name}}</div>
-                                <div class="description">{{description_trim}}</div>
-                                <div class="phone">{{phone}}</div>
-                            </a>
-                        {{/stores}}
-                        <h4 class="list-group-item header" style="{{promotions_header_style}}" data-i18n="nav.promotions"></h4>
-                        {{#promotions}}
-                            <a href="/promotions/{{slug}}" class="list-group-item">
-                                <div class="name">{{name}}</div>
-                                <div class="description">{{description_trim}}</div>
-                            </a>
-                        {{/promotions}}
-                        <h4 class="list-group-item header" style="{{events_header_style}}" data-i18n="nav.events"></h4>
-                        {{#events}}
-                            <a href="/events/{{slug}}" class="list-group-item">
-                                <div class="name">{{name}}</div>
-                                <div class="description">{{description_trim}}</div>
-                            </a>
-                        {{/events}}
-                        </script>{% endraw %}
                     
-                        <ul class="list-group" >
-                            
-                            
-                            <a  class="close-search list-group-item" style="">
-                                <small>
-                                    <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> 
-                                </small>
-                            </a>
-                            <a  class="close-search list-group-item" style="">
-                                <small>
-                                    <span>Today's Hours </span>
-                                </small>
-                                <small class="pull-right" id="todays-hours-search">
-                                
-                                </small>
-                                <script id="todays_hours_search_template" type="x-tmpl-mustache/text">{% raw %}
-                                    <span style="{{is_open_css}};">
-                                        {{open_time_localized}} - {{close_time_localized}}
-                                    </span>
-                                    <span style="{{is_closed_css}};">
-                                        Closed
-                                    </span>
-                                </script>{% endraw %}
-                            </a>
-                            <div id="search_results_items" class="search-results-items" style="">
-                            <!--RENDERED BY renderSearchResultsTemplate(..) -->
-                            </div>
-                        </ul>
-                    </div>
                  </div>
                  <div class="footer_teaser col-sm-4 col-md-4">
                     <h3 class="footer_text" style="font-size:17px;width:300px;text-align:left">Explore</h3>
