@@ -11,6 +11,8 @@ function renderAll(){
     $("#loading_screen").hide();
     $("#main_content").show();
     renderSVGMap();
+    
+    
     $('.show_cat_stores').click(function(e){
         var cat_id = $(this).attr('data-id');
         var rows = $('.cats_row');
