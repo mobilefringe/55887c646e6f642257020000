@@ -17,7 +17,7 @@
                                     <h3 class="post_title">
                                         <a href="/{{slug}}"><img alt="blog" class="width_100" src="{{post_image}}" /></a>
                                     </h3>
-                                    <div class="post_sub"><i class="fa fa-calendar"></i> March 1, 2013 </div>
+                                    <div class="post_sub"><i class="fa fa-calendar"></i>{{published_on}}</div>
                                 </div>
                                 <div class="post_content">
                                     <figure><a href="single_post.html"><img alt="0" src="images/portfolio/p4.jpg"></a></figure>
