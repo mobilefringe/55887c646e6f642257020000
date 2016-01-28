@@ -384,7 +384,6 @@
                         {{#stores}}
                             <a href="/stores/{{slug}}" class="list-group-item">
                                 <div class="name">{{name}}</div>
-                                <div class="description">{{description_trim}}</div>
                                 <div class="phone">{{phone}}</div>
                             </a>
                         {{/stores}}
@@ -392,14 +391,12 @@
                         {{#promotions}}
                             <a href="/promotions/{{slug}}" class="list-group-item">
                                 <div class="name">{{name}}</div>
-                                <div class="description">{{description_trim}}</div>
                             </a>
                         {{/promotions}}
                         <h4 class="list-group-item header" style="{{events_header_style}}" data-i18n="nav.events">Events</h4>
                         {{#events}}
                             <a href="/events/{{slug}}" class="list-group-item">
                                 <div class="name">{{name}}</div>
-                                <div class="description">{{description_trim}}</div>
                             </a>
                         {{/events}}
                         </script>{% endraw %}
