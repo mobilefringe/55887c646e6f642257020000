@@ -380,7 +380,7 @@
             <div class="search-results" id="search_results" style="display:none">
                         <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
                         <script id="search_results_template" type="x-tmpl-mustache/text">{% raw %}
-                        <h4 class="list-group-item header" style="{{stores_header_style}}" data-i18n="nav.stores"></h4>
+                        <h4 class="list-group-item header" style="{{stores_header_style}}" data-i18n="nav.stores">Stores</h4>
                         {{#stores}}
                             <a href="/stores/{{slug}}" class="list-group-item">
                                 <div class="name">{{name}}</div>
