@@ -282,6 +282,12 @@ th {
     border: solid 1px #cccccc;
 }
 
+.btn-primary.active{
+    color: #299E48 !important;
+    background: #fff !important;
+}
+
+
 #pop-over-map-name{
    color:#FFF;
    padding:0px;
