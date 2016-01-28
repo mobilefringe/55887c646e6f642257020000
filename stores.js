@@ -32,7 +32,6 @@ function renderAll(){
         $(this).addClass('active_cat');
         var rows = $('.cats_row');
         rows.show();
-        
         e.preventDefault();
     });
 }
