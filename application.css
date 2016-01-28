@@ -271,10 +271,10 @@ th {
 }
 
 .hidden_phone{
-      display:inlin-block;
+      display:inline-block;
   }
   .show_phone{
-      display:inline-block;
+      display:none;
   }
 
 #pop-over{
