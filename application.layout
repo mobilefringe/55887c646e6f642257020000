@@ -405,29 +405,6 @@
                         </script>{% endraw %}
                     
                         <ul class="list-group" >
-                            
-                            
-                            <a  class="close-search list-group-item" style="">
-                                <small>
-                                    <span class="search-results-count">{{count}} results found.</span>&nbsp;<span data-i18n="general.results"></span> 
-                                </small>
-                            </a>
-                            <a  class="close-search list-group-item" style="">
-                                <small>
-                                    <span>Today's Hours </span>
-                                </small>
-                                <small class="pull-right" id="todays-hours-search">
-                                
-                                </small>
-                                <script id="todays_hours_search_template" type="x-tmpl-mustache/text">{% raw %}
-                                    <span style="{{is_open_css}};">
-                                        {{open_time_localized}} - {{close_time_localized}}
-                                    </span>
-                                    <span style="{{is_closed_css}};">
-                                        Closed
-                                    </span>
-                                </script>{% endraw %}
-                            </a>
                             <div id="search_results_items" class="search-results-items" style="">
                             <!--RENDERED BY renderSearchResultsTemplate(..) -->
                             </div>
