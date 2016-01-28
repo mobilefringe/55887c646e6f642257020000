@@ -27,7 +27,7 @@ function renderAll(){
         });
         e.preventDefault();
     });
-    $('.show_all_stores').click(function(e){
+    $('#show_all_stores').click(function(e){
         $('.active_cat').removeClass('active_cat');
         $(this).addClass('active_cat');
         var rows = $('.cats_row');
