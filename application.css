@@ -270,6 +270,13 @@ th {
     display:none;
 }
 
+.hidden_phone{
+      display:inlin-block;
+  }
+  .show_phone{
+      display:inline-block;
+  }
+
 #pop-over{
     position:absolute;
     min-height:60px;
