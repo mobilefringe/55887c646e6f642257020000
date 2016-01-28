@@ -47,7 +47,7 @@
         </section>
     </div>
 </div>
-
+<script src="/blog.js"></script>
 <script>
     $(document).ready(function(e) {
         init(e);
