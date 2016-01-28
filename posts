@@ -10,19 +10,23 @@
           <section>
             <div class="row">
                 <div id="leftcol" class="col-sm-8 col-md-8">
-                    <article class="post">
-                        <div class="post_header">
-                            <h3 class="post_title">
-                                <a href="single_post.html">Fugiat dapibus,ut fermentum mas justo sitters amet risus.</a>
-                            </h3>
-                            <div class="post_sub"><i class="fa fa-calendar"></i> March 1, 2013 </div>
-                        </div>
-                        <div class="post_content">
-                            <figure><a href="single_post.html"><img alt="0" src="images/portfolio/p4.jpg"></a></figure>
-                                <p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets....</p>
-                            <a href="single_post.html" class="btn btn-primary">Read More</a>
-                        </div>
-                    </article>
+                    <div class="blog_parent" id="blog_container">
+                        <script id="blog_template" type="x-tmpl-mustache/text">
+                            <article class="post">
+                                <div class="post_header">
+                                    <h3 class="post_title">
+                                        <a href="single_post.html">Fugiat dapibus,ut fermentum mas justo sitters amet risus.</a>
+                                    </h3>
+                                    <div class="post_sub"><i class="fa fa-calendar"></i> March 1, 2013 </div>
+                                </div>
+                                <div class="post_content">
+                                    <figure><a href="single_post.html"><img alt="0" src="images/portfolio/p4.jpg"></a></figure>
+                                        <p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets....</p>
+                                    <a href="single_post.html" class="btn btn-primary">Read More</a>
+                                </div>
+                            </article>
+                        </script>
+                    </div>
                     <input type="hidden" value="1" id="num_loaded" />
                     <p class="new_store_subheading text-center hidden_now hstc" id="all_loaded">NO MORE POSTS</p>
                     <p class="text-center" id="loaded_posts">
