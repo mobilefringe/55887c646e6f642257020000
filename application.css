@@ -276,7 +276,7 @@ th {
 }
 .list-group-item.header{
     margin-top:0;
-    border-radius:0;
+    border-radius:0 !important;
 }
 .simply-scroll .simply-scroll-clip, .simply-scroll{
     width:100%;
