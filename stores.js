@@ -118,7 +118,6 @@ function getSVGMapURL(){
 
 
 function render_categories(categories){
-    
     $.each( categories , function( key, val ) {
         $("#categories_container").append('<a href="#" data-id="'+ val.id + '" class="btn btn-primary">'+val.name+'</a>');
     });
