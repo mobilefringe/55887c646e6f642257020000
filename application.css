@@ -282,6 +282,8 @@ th {
 .list-group-item.header{
     margin-top:0;
     border-radius:0 !important;
+    background: #389e47;
+    color: #fff;
 }
 .simply-scroll .simply-scroll-clip, .simply-scroll{
     width:100%;
