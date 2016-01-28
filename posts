@@ -22,7 +22,7 @@
                                 <div class="post_content">
                                     <figure><a href="single_post.html"><img alt="blog" class="width_100" src="{{post_image}}" /></a></figure>
                                         <p>{{description_short}}</p>
-                                    <a href="single_post.html" class="btn btn-primary">Read More</a>
+                                    <a href="/{{slug}}" class="btn btn-primary">Read More</a>
                                 </div>
                             </article>
                         </script>
