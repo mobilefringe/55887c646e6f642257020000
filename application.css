@@ -283,7 +283,7 @@ th {
     border: solid 1px #cccccc;
 }
 
-.btn-primary.active{
+.btn-primary.active_cat{
     color: #299E48 !important;
     background: #fff !important;
 }
