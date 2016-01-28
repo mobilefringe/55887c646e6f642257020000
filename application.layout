@@ -545,10 +545,10 @@ with sales of over $1,300 per square foot.</br>
         
         $('#search_results_items').hover(
             function(){
-                $(body).addClass('no_scroll');
+                $('body').addClass('no_scroll');
             },
             function(){
-                $(body).removeClass('no_scroll');
+                $('body').removeClass('no_scroll');
             }
         );
         
