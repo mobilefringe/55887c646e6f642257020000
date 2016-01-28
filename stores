@@ -39,7 +39,7 @@
           </section>
           
           <div class="categories_list" id="categories_container">
-                <a href="#categories_container" id="show_all_stores" class="btn btn-primary">View All</a>
+                <a href="#categories_container" id="show_all_stores active" class="btn btn-primary">View All</a>
           </div>
           
            <div class="portfolio_strict row" id="store_list_container">
