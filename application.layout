@@ -388,14 +388,14 @@
                                 <div class="phone">{{phone}}</div>
                             </a>
                         {{/stores}}
-                        <h4 class="list-group-item header" style="{{promotions_header_style}}" data-i18n="nav.promotions"></h4>
+                        <h4 class="list-group-item header" style="{{promotions_header_style}}" data-i18n="nav.promotions">Promotions</h4>
                         {{#promotions}}
                             <a href="/promotions/{{slug}}" class="list-group-item">
                                 <div class="name">{{name}}</div>
                                 <div class="description">{{description_trim}}</div>
                             </a>
                         {{/promotions}}
-                        <h4 class="list-group-item header" style="{{events_header_style}}" data-i18n="nav.events"></h4>
+                        <h4 class="list-group-item header" style="{{events_header_style}}" data-i18n="nav.events">Events</h4>
                         {{#events}}
                             <a href="/events/{{slug}}" class="list-group-item">
                                 <div class="name">{{name}}</div>
