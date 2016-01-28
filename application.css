@@ -8020,6 +8020,7 @@ blockquote p {
 /* =Responsive: Small screen to tablet & IPAD
 -------------------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 991px) {
+    
   .flexslider .container {
     height: 350px;
   }
@@ -8372,6 +8373,12 @@ blockquote p {
 /* =Responsive: Portrait Phone
 -------------------------------------------------------------- */
 @media only screen and (max-width: 480px) {
+  .hidden_phone{
+      display:none;
+  }
+  .show_phone{
+      display:inline-block;
+  }
   .navbar {
     margin-bottom: 10px;
   }
