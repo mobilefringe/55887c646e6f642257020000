@@ -12,7 +12,7 @@
                 <div id="leftcol" class="col-sm-8 col-md-8">
                     <div class="blog_parent" id="blog_container">
                         <script id="blog_template" type="x-tmpl-mustache/text">
-                            <article class="post">
+                            <article class="post" id="show_{{counter}}">
                                 <div class="post_header">
                                     <h3 class="post_title">
                                         <a href="/{{slug}}"><img alt="blog" class="width_100" src="{{post_image}}" /></a>
