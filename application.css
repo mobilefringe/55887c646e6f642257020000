@@ -266,6 +266,10 @@ th {
     margin:3px;
 }
 
+.hidden_now{
+    display:none;
+}
+
 #pop-over{
     position:absolute;
     min-height:60px;
