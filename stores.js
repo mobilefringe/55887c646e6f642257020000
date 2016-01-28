@@ -17,6 +17,8 @@ function renderAll(){
         var cat_id = $(this).attr('data-id');
         var rows = $('.cats_row');
         rows.hide();
+        $('.active_cat').removeClass('active_cat');
+        $(this).addClass('active_cat');
         $.each(rows, function(i, val){
             var cat_array = val.getAttribute('data-cat').split(',');
             if ($.inArray(cat_id, cat_array) >= 0){
