@@ -137,7 +137,7 @@ function renderPageData(container, template, collection, type){
                 val.alt_store_front_url = getImageURL(val.store_front_url);    
             }
         }
-        
+        val.cat_list = val.categories.join(',')
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
 
