@@ -274,6 +274,11 @@ th {
     height:20px;
     margin:20px;
 }
+
+.list-group-item{
+    border: 1px solid #efefef;    
+}
+
 .list-group-item.header{
     margin-top:0;
     border-radius:0 !important;
