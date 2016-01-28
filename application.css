@@ -361,6 +361,7 @@ th {
     position: absolute;
     max-height: 300px;
     overflow: scroll;
+    width:100%;
 }
 
 #search_wrapper {
