@@ -15,7 +15,7 @@
                             <article class="post" id="show_{{counter}}">
                                 <div class="post_header">
                                     <h3 class="post_title">
-                                        <a href="/{{slug}}">{{titl}}</a>
+                                        <a href="/{{slug}}">{{title}}</a>
                                     </h3>
                                     <div class="post_sub"><i class="fa fa-calendar"></i>{{published_on}}</div>
                                 </div>
