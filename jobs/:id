@@ -59,7 +59,7 @@ h3{
             
             <div id="centre_info_container">
                 
-                    <br><img src="{{image}}">
+                    <br><img class="hidden_phone" src="{{image}}">
            <br><br> 
            <p id="contact_datee">
             <strong>Closing Date: </strong>{{dates}}
