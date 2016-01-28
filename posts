@@ -15,7 +15,7 @@
                             <article class="post">
                                 <div class="post_header">
                                     <h3 class="post_title">
-                                        <a href="single_post.html">Fugiat dapibus,ut fermentum mas justo sitters amet risus.</a>
+                                        <a href="/{{slug}}"><img alt="blog" class="width_100" src="{{post_image}}" /></a>
                                     </h3>
                                     <div class="post_sub"><i class="fa fa-calendar"></i> March 1, 2013 </div>
                                 </div>
