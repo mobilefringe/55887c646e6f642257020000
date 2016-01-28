@@ -359,6 +359,8 @@ th {
 #search_results .list-group{
     z-index: 99999;
     position: absolute;
+    max-height: 300px;
+    overflow: scroll;
 }
 
 #search_wrapper {
