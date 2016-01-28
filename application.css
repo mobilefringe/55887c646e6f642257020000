@@ -274,7 +274,9 @@ th {
     height:20px;
     margin:20px;
 }
-
+.list-group-item.header{
+    margin-top:0;
+}
 .simply-scroll .simply-scroll-clip, .simply-scroll{
     width:100%;
 }
