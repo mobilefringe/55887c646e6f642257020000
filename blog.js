@@ -53,7 +53,7 @@ function renderPostDetails(container, template, collection){
     var template_html = $(template).html();
     $.each( collection , function( key, val ) {
         if (val.image_url.indexOf('missing.png') > -1) {
-            val.post_image = "http://assets.codecloudapp.com/sites/56056be06e6f641a1d020000/image/png/1446826281000/stc-logo-holiday-360 copy.png";
+            val.post_image = "http://cdn.mallmaverick.com/system/sites/logo_images/000/000/049/original/logo.png?1439229969";
         } else {
             val.post_image = val.image_url;
         }
