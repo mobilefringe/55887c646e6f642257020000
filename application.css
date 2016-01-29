@@ -515,7 +515,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .blog_cats li a:hover{
     background: #299E48;
-    color:#fff;
+    color:#fff !important;
 }
 
 .home_blog_desc{
