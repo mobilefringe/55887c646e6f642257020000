@@ -20,7 +20,7 @@
                                     <div class="post_sub"><i class="fa fa-calendar"></i> {{published_on}}</div>
                                 </div>
                                 <div class="post_content">
-                                    <figure><a href="single_post.html"><img alt="blog" class="width_100" src="{{post_image}}" /></a></figure>
+                                    <a href="/{{slug}}"><img alt="blog" class="width_100" src="{{post_image}}" /></a></figure>
                                         <p>{{description_short}}</p>
                                     <a href="/{{slug}}" class="btn btn-primary">Read More</a>
                                 </div>
