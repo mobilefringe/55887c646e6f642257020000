@@ -470,6 +470,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     
 }
 
+.post_image{
+    width:100%;
+    margin-bottom:20px;
+}
+
 .home_blog_header a{
     font-weight: bold !important;
     max-height:38px;
