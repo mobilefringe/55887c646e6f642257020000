@@ -450,16 +450,15 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 .margin_30{
     margin-bottom:30px;
 }
-.custom_nav li a{
+.custom_nav li{
     position:relative;
 }
 
-.custom_nav li a::after{
+.custom_nav li::after{
     content: " ";
     height: 2px;
     width: 100%;
     color: #299E48;
-    position:absolute;
 }
 
 .home_blog_header{
