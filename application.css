@@ -462,7 +462,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     padding: 15px;
     width:45px;
     text-align:center;
-    order-radius: 0px 5px 5px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .home_blog_image{
