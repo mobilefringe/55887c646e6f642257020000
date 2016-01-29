@@ -565,7 +565,7 @@
             renderPropertyFooter('#footer_template','#footer_container',propertyDetails);
             renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
             var posts = getAllPublishedPosts();
-            var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse().splice(1,2);
+            var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse().splice(0,2);
             renderHomeBlog()
             
         }
