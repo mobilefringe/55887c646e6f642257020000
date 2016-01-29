@@ -476,6 +476,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     font-size:22px;
 }
 
+.home_blog_desc{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+
 .home_blog_image{
     max-width:100%;
     max-height:70px;
