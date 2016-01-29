@@ -462,7 +462,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     display:block;
 }
 
-.home_blog_header{
+.home_blog_header a{
     font-size: 14px !important;
     color: #299E48 !important;
     margin: 0 !important;
