@@ -450,7 +450,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 .margin_30{
     margin-bottom:30px;
 }
-.custom_nav li{
+.custom_nav li a{
     position:relative;
 }
 
