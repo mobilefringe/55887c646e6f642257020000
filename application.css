@@ -498,7 +498,9 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     font-weight:bold;
     font-size:22px;
 }
-
+.green{
+    color:#299E48
+}
 .blog_cats{
     list-style: none;
     padding-left: 0;
