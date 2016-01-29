@@ -58,6 +58,7 @@
         var posts = getAllPublishedPosts();
         var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse();
         renderPosts("#blog_container", "#blog_template", published_posts);
+        renderBlogs("#blog_links_container", "#blog_links_template", blogs);
         load_more(1);
         
         $('#load_more_posts').click(function(e){
