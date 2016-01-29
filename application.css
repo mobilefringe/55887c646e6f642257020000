@@ -459,10 +459,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .home_blog_date{
     background: #000;
-    padding: 15px;
-    width:45px;
-    text-align:center;
+    adding: 9px 0;
+    width: 45px;
+    text-align: center;
     border-radius: 0px 5px 5px 0px;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 .home_blog_image{
