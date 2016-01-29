@@ -492,8 +492,9 @@
       <section class="copyright">
            <div class="container">
                 <div class="row">
-                     <div class="col-sm-6 col-md-6 footer-text"> ©2015 Twin Pines Mall All rights reserved. | <a href="/privacy_policy" style="color:green">Privacy Policy </a></div>
-                     <div class="text-right col-sm-6 col-md-6 footer-text"> Powered by <a href="http://mallmaverick.com/" target="_blank" style="color:green !important">Mall Maverick</a> </div>
+                    <div class="col-sm-6 col-md-4 footer-text"> ©2015 Twin Pines Mall All rights reserved. | <a href="/privacy_policy" style="color:green">Privacy Policy </a></div>
+                    <div class="col-sm-6 col-md-4 footer-text">
+                    <div class="text-right col-sm-4 col-md-6 footer-text"> Powered by <a href="http://mallmaverick.com/" target="_blank" style="color:green !important">Mall Maverick</a> </div>
                 </div>
            </div>
       </section>
