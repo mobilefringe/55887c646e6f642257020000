@@ -452,8 +452,8 @@
                                         <h3 class="home_blog_header">{{title}}</h3>
                                         <p class="home_blog_desc">{{description_short}}</p>
                                     </div>
-                                    <div class="col-md-2 col-xs-2">
-                                        <div class="home_blog_date text-center">
+                                    <div class="col-md-2 col-xs-2 text-center">
+                                        <div class="home_blog_date">
                                             <span>{{published_day}}</span>
                                             {{published_month}}
                                         </div>
