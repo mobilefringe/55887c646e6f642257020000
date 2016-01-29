@@ -453,8 +453,8 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .custom_nav::after{
     content: " ";
-    height: 4px;
-    width: 40px;
+    height: 2px;
+    width: 100%;
 }
 
 .home_blog_header{
