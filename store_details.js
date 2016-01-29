@@ -177,6 +177,7 @@
                 });
             }else if (type == "hours"){
                 hours = getHoursForIds(collection.store_hours)
+                if (hours.length <= -)
                 $('#hours_header').hide();
                 $.each( hours , function( key, val ) {
                     switch(val.day_of_week) {
