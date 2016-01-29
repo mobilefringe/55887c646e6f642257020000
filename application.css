@@ -477,9 +477,9 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .home_blog_desc{
-    font-size: 14px;
-    color: #fff;
-    font-weight: 400;
+    font-size: 14px !important;
+    color: #fff !important;
+    font-weight: 400 !important;
 }
 
 .home_blog_image{
