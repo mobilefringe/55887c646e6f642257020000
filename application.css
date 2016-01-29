@@ -457,6 +457,10 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     max-height:38px;
 }
 
+.home_blog_image{
+    width:100%;
+}
+
 #loading_screen img{
     position:absolute;
     left:0;
