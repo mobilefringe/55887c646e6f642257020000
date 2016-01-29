@@ -47,6 +47,54 @@ function renderBlogs(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
+function renderPostDetails(container, template, collection){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    $.each( collection , function( key, val ) {
+        if (val.image_url.indexOf('missing.png') > -1) {
+            val.post_image = "http://assets.codecloudapp.com/sites/56056be06e6f641a1d020000/image/png/1446826281000/stc-logo-holiday-360 copy.png";
+        } else {
+            val.post_image = val.image_url;
+        }
+        if(val.body.length > 100){
+            val.description_short = val.body.substring(0,100) + "...";
+        }
+        else{
+            val.description_short = val.body;
+        }
+        var date_blog = new Date((val.publish_date + " 05:00:00").replace(/-/g,"/"));
+        val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
+        var next_p = getNextPublishedPostBySlug(val.slug);
+        var prev_p = getPrevPublishedPostBySlug(val.slug);
+        if (next_p == undefined){
+            val.next_post_show = "display:none";
+        }
+        else{
+            val.next_post = next_p.title;
+            val.next_slug = next_p.slug;
+            val.next_post_show = "display:inline-block";
+        }
+        if (prev_p == undefined){
+            val.prev_post_show = "display:none";
+        }
+        else{
+            val.prev_post = prev_p.title;
+            val.prev_slug = prev_p.slug;
+            val.prev_post_show = "display:inline-block";
+        }
+        
+        if (val.tag != undefined){
+            val.tag_list = val.tag.join(', ');
+        }
+        val.twitter_title= val.title + " via @shopSTC";
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    
+    $(container).html(item_rendered.join(''));
+}
+
 
 
 function load_more(num){
