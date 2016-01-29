@@ -448,6 +448,7 @@
                                 </div>
                                 <div class="col-md-8 col-xs-8">
                                     <h3 class="home_blog_header">{{title}}</h3>
+                                    <p class="footer_text"></p>
                                 </div>
                                 <div class="col-md-2 col-xs-2">
                                 </div>
