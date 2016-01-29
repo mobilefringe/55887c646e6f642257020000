@@ -513,7 +513,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     color:#fff;
 }
 
-.blog_cats a{
+.blog_cats li a{
     display:block;
 }
 
