@@ -462,15 +462,21 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     display:block;
 }
 
-.home_blog_header a{
-    font-size: 14px !important;
-    color: #299E48 !important;
+.home_blog_header{
+    
     margin: 0 !important;
     padding: 0 !important;
     margin-bottom: 10px !important;
+    
+}
+
+.home_blog_header a{
     font-weight: bold !important;
     max-height:38px;
+    font-size: 14px !important;
+    color: #299E48 !important;
 }
+
 
 .home_blog_date{
     background: #000;
