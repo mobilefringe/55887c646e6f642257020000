@@ -508,6 +508,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .blog_cats li{
     padding: 5px 20px;
+    margin: 10px 0;
 }
 
 .active_blog{
