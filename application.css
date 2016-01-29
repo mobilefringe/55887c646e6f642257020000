@@ -504,6 +504,10 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     padding-left: 0;
 }
 
+.blog li{
+    
+}
+
 .home_blog_desc{
     font-size: 14px !important;
     color: #fff !important;
