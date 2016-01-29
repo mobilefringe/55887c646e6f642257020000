@@ -453,6 +453,7 @@
                                         <p class="home_blog_desc">{{description_short}}</p>
                                     </div>
                                     <div class="col-md-2 col-xs-2">
+                                        {{published_on}}
                                     </div>
                                 </div>
                             {% endraw %}
