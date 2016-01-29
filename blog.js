@@ -87,7 +87,6 @@ function renderPostDetails(container, template, collection){
         if (val.tag != undefined){
             val.tag_list = val.tag.join(', ');
         }
-        val.twitter_title= val.title + " via @shopSTC";
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
