@@ -452,7 +452,9 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .custom_nav::after{
-    
+    content: " ";
+    height: 4px;
+    width: 40px;
 }
 
 .home_blog_header{
