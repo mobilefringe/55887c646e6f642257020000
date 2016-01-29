@@ -74,7 +74,8 @@
         renderPosts("#side_links_container", "#side_links_template", published_posts.slice(0,5));
         renderBlogs("#blog_links_container", "#blog_links_template", blogs);
         $('#blog_links_container').prepend("<li><a href='/posts'>All</a></li>")
-        $("#"+slug).parent().addClass('active_blog')
+        $("#"+slug).parent().addClass('active_blog');
+        $('#active_cat').text($("#"+slug).text())
         load_more(1);
         
         $('#load_more_posts').click(function(e){
