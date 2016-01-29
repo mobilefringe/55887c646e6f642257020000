@@ -426,7 +426,7 @@
                         {% raw %}
                         <h3>ABOUT US</h3>
                         Twin Pine Mall ranks as one of the highest performing shopping centres in North America with sales of over $1,300 per square foot.</br>
-                       216 Chrislea Road Vaughan On L4L 8S5</br>
+                        216 Chrislea Road Vaughan On L4L 8S5</br>
                         {{city}}, {{province_state}}
                         </br>
                         </br>
