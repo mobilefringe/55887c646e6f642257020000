@@ -446,6 +446,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     position:relative;
     height:400px;
 }
+
+.home_blog_header{
+    font-size: 14px;
+    color: #299E48;
+}
+
 #loading_screen img{
     position:absolute;
     left:0;
