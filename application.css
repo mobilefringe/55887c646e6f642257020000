@@ -451,7 +451,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     margin-bottom:30px;
 }
 
-.custom_nav::after{
+.custom_nav li::after{
     content: " ";
     height: 2px;
     width: 100%;
