@@ -454,6 +454,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     padding: 0 !important;
     margin-bottom: 10px !important;
     font-weight: bold !important;
+    height:38px;
 }
 
 #loading_screen img{
