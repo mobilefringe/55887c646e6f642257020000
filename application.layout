@@ -446,6 +446,7 @@
                             {% raw %}
                                 <div class="row">
                                     <div class="col-md-2 col-xs-2">
+                                        <img alt="blog" class="width_100" src="{{post_image}}" />
                                     </div>
                                     <div class="col-md-8 col-xs-8">
                                         <h3 class="home_blog_header">{{title}}</h3>
