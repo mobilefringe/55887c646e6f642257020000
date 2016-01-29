@@ -444,6 +444,12 @@
                     <div id="home_blog_container">
                         <script id="home_blog_template" type="x-tmpl-mustache/text">
                             {% raw %}
+                                <div class="col-md-2 col-xs-2">
+                                </div>
+                                <div class="col-md-8 col-xs-8">
+                                </div>
+                                <div class="col-md-2 col-xs-2">
+                                </div>
                                 {{title}}
                             {% endraw %}
                         </script>
