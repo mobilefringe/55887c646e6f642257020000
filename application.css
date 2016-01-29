@@ -454,7 +454,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     position:relative;
 }
 
-.custom_nav li::after{
+.custom_nav li a::after{
     content: " ";
     height: 2px;
     width: 100%;
