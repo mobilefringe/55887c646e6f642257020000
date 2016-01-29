@@ -449,7 +449,7 @@
                                         <img alt="blog" class="home_blog_image" src="{{post_image}}" />
                                     </div>
                                     <div class="col-md-8 col-xs-8">
-                                        <h3 class="home_blog_header"><a href="/{{slug}}">{{title}}</a></h3>
+                                        <h3 class="home_blog_header"><a href="/posts/{{slug}}">{{title}}</a></h3>
                                         <p class="home_blog_desc">{{description_short}}</p>
                                     </div>
                                     <div class="col-md-2 col-xs-2 text-right">
