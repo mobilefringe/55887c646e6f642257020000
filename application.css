@@ -458,7 +458,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     content: " ";
     height: 2px;
     width: 100%;
-    color: #299E48;
+    background-color: #299E48;
 }
 
 .home_blog_header{
