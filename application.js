@@ -30,7 +30,7 @@ function renderHomeBlog(container, template, collection){
             val.post_image = val.image_url;
         }
         if(val.body.length > 100){
-            val.description_short = val.body.substring(0,300) + "...";
+            val.description_short = val.body.substring(0,100) + "...";
         }
         else{
             val.description_short = val.body;
