@@ -508,6 +508,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     padding: 5px 20px;
 }
 
+.active_nav{
+    background: #299E48;
+    color: #fff !important;
+}
+
 .blog_cats li:hover{
     background: #299E48;
     color:#fff;
