@@ -354,7 +354,7 @@
                                 <li><a href="/events">Events</a></li>
                             </ul> 
                          </li>
-                         <li id="jobs_link"><a href="/jobs">Jobs</a></li>
+                         <li class=" show_hover" id="jobs_link"><a href="/jobs">Jobs</a></li>
                          
                         
                          <li id="contact_link" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Information <span class="caret"></span></a>
