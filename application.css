@@ -499,6 +499,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     font-size:22px;
 }
 
+.blog_cats{
+    list-style: none;
+    padding-left: 0;
+}
+
 .home_blog_desc{
     font-size: 14px !important;
     color: #fff !important;
