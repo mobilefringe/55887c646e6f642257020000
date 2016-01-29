@@ -459,6 +459,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .home_blog_image{
     width:100%;
+    margin:0;
 }
 
 #loading_screen img{
