@@ -177,6 +177,7 @@
                 });
             }else if (type == "hours"){
                 hours = getHoursForIds(collection.store_hours)
+                console.log(val.hours)
                 $.each( hours , function( key, val ) {
                     switch(val.day_of_week) {
                         case 0:
