@@ -68,11 +68,13 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         var posts = getBlogDataBySlug(slug).posts;
+        
         var published_posts = posts.sortBy(function(o){ return o.publish_date }).reverse();
         renderPosts("#blog_container", "#blog_template", published_posts);
         renderPosts("#side_links_container", "#side_links_template", published_posts.slice(0,5));
         renderBlogs("#blog_links_container", "#blog_links_template", blogs);
         $('#blog_links_container').prepend("<li><a href='/posts'>All</a></li>")
+        $("#"+slug).addClass('active_nav')
         load_more(1);
         
         $('#load_more_posts').click(function(e){
