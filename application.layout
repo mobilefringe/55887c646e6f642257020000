@@ -367,7 +367,7 @@
                             </ul> 
                          </li>
                           
-                           <li id="jobs_link"><a href="/posts">Blog</a></li>
+                           <li class=" show_hover" id="jobs_link"><a href="/posts">Blog</a></li>
                     </ul>
                </div>
           </div>
