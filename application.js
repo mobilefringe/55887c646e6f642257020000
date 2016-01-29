@@ -29,8 +29,8 @@ function renderHomeBlog(container, template, collection){
         } else {
             val.post_image = val.image_url;
         }
-        if(val.body.length > 70){
-            val.description_short = val.body.substring(0,70) + "...";
+        if(val.body.length > 50){
+            val.description_short = val.body.substring(0,50) + "...";
         }
         else{
             val.description_short = val.body;
