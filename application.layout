@@ -454,7 +454,6 @@
                                     <div class="col-md-2 col-xs-2">
                                     </div>
                                 </div>
-                                
                             {% endraw %}
                         </script>
                     </div>
