@@ -22,7 +22,6 @@ function renderHomeBlog(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
-    var counter = 1;
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.image_url.indexOf('missing.png') > -1) {
@@ -37,13 +36,11 @@ function renderHomeBlog(container, template, collection){
             val.description_short = val.body;
         }
         val.description_short = val.description_short.replace("&amp;", "&");
-        val.counter = counter;
         var date_blog = new Date((val.publish_date + " 05:00:00").replace(/-/g,"/"));
         val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
         
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
-        counter = counter+1;
     });
     
     $(container).show();
