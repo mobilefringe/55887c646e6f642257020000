@@ -513,6 +513,10 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     color:#fff;
 }
 
+.blog_cats a{
+    display:block;
+}
+
 .blog_cats li a:hover, .blog_cats li:hover a{
     background: #299E48;
     color:#fff !important;
