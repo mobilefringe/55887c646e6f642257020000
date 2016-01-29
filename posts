@@ -50,7 +50,7 @@
                         <h4>Recent Posts</h4>
                         <ul class="blog_cats" id="side_links_container">
                             <script id="side_links_template" type="x-tmpl-mustache/text">
-                                <li><a href="/posts_categories/{{slug}}" class="trending_side_link">{{name}}</a></li>
+                                <li><a href="/{{slug}}" class="trending_side_link">{{title}}</a></li>
                             </script>
                         </ul>
                     </aside>
