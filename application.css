@@ -510,6 +510,9 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .active_nav{
     background: #299E48;
+}
+
+.active_nav a{
     color: #fff !important;
 }
 
