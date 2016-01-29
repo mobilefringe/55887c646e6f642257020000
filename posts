@@ -15,14 +15,14 @@
                             <article class="post hidden_now" id="show_{{counter}}">
                                 <div class="post_header">
                                     <h3 class="post_title">
-                                        <a href="/{{slug}}">{{title}}</a>
+                                        <a href="/posts/{{slug}}">{{title}}</a>
                                     </h3>
                                     <div class="post_sub"><i class="fa fa-calendar"></i> {{published_on}}</div>
                                 </div>
                                 <div class="post_content">
-                                    <a href="/{{slug}}"><img alt="blog" class="post_image" src="{{post_image}}" /></a>
+                                    <a href="/posts/{{slug}}"><img alt="blog" class="post_image" src="{{post_image}}" /></a>
                                         <p>{{description_short}}</p>
-                                    <a href="/{{slug}}" class="btn btn-primary">Read More</a>
+                                    <a href="/posts/{{slug}}" class="btn btn-primary">Read More</a>
                                 </div>
                             </article>
                         </script>
