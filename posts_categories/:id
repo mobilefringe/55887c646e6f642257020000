@@ -5,7 +5,7 @@
             <ul class="breadcrumb pull-right">
                 <li><a href="/">Home</a> </li>
                 <li>Blog</li>
-                <li class="active"></li>
+                <li class="active" id="active_cat"></li>
             </ul>
         </section>
           <section>
