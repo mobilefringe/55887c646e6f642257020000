@@ -453,8 +453,10 @@
                                         <p class="home_blog_desc">{{description_short}}</p>
                                     </div>
                                     <div class="col-md-2 col-xs-2">
-                                        {{published_day}}
-                                        {{published_month}}
+                                        <div class="home_blog_date">
+                                            {{published_day}}
+                                            {{published_month}}
+                                        </div>
                                     </div>
                                 </div>
                             {% endraw %}
