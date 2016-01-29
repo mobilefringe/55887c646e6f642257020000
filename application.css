@@ -450,6 +450,9 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 .home_blog_header{
     font-size: 14px !important;
     color: #299E48 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
 }
 
 #loading_screen img{
