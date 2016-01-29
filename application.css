@@ -447,6 +447,10 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     height:400px;
 }
 
+.MARGIN_30{
+    margin-bottom:30px;
+}
+
 .home_blog_header{
     font-size: 14px !important;
     color: #299E48 !important;
