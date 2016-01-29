@@ -444,6 +444,7 @@
                     <div id="home_blog_container">
                         <script id="home_blog_template" type="x-tmpl-mustache/text">
                             {% raw %}
+                                
                             {% endraw %}
                         </script>
                     </div>
