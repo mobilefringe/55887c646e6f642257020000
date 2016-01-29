@@ -505,7 +505,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .blog_cats li{
-    padding: 5px 0;
+    padding: 5px;
 }
 
 .blog_cats li:hover{
