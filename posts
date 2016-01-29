@@ -40,7 +40,7 @@
                 <div id="sidebar" class="col-sm-4 col-md-4">
                     <aside class="widget">
                         <h4>Blog Categories</h4>
-                        <ul class="nav nav-pills nav-stacked">
+                        <ul class="blog_cats">
                             <li class="active"><a href="#">All</a></li>
                             <li><a href="#">News</a></li>
                             <li><a href="#">Press</a></li>
