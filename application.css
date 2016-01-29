@@ -471,6 +471,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     text-transform: uppercase;
 }
 
+.home_blog_date span{
+    font-weight:bold;
+    font-size:22px;
+}
+
 .home_blog_image{
     max-width:100%;
     max-height:70px;
