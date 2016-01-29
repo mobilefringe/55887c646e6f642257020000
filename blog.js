@@ -65,7 +65,7 @@ function renderPostDetails(container, template, collection){
         }
         
         if(val.author == "" || val.author == undefined){
-            val.author_exists = "display:none"
+            val.author_exists = "display:none;"
         }
         var date_blog = new Date((val.publish_date + " 05:00:00").replace(/-/g,"/"));
         val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
