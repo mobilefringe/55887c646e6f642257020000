@@ -171,6 +171,7 @@
                     
                     
                     val.hours = (getHoursForIds(val.store_hours))
+                    console.log(val.hours)
                     var rendered = Mustache.render(template_html,val);
                     item_rendered.push(rendered);
                 });
