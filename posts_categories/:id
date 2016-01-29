@@ -43,7 +43,7 @@
                         <h4>Blog Categories</h4>
                         <ul class="blog_cats" id="blog_links_container">
                             <script id="blog_links_template" type="x-tmpl-mustache/text">
-                                <li><a href="/posts_categories/{{slug}}" class="trending_side_link">{{name}}</a></li>
+                                <li><a href="/posts_categories/{{slug}}" id="{{slug}}" class="trending_side_link">{{name}}</a></li>
                             </script>
                         </ul>
                     </aside>
