@@ -1,0 +1,85 @@
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            <h1>Blog</h1>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a> </li>
+                <li class="active">Blog</li>
+                
+            </ul>
+        </section>
+          <section>
+            <div class="row">
+                <div id="leftcol" class="col-sm-8 col-md-8">
+                    <div class="blog_parent" id="blog_container">
+                        <script id="blog_template" type="x-tmpl-mustache/text">
+                            <article class="post hidden_now" id="show_{{counter}}">
+                                <div class="post_header">
+                                    <h3 class="post_title">
+                                        <a href="/posts/{{slug}}">{{title}}</a>
+                                    </h3>
+                                    <div class="post_sub"><i class="fa fa-calendar"></i> {{published_on}}</div>
+                                </div>
+                                <div class="post_content">
+                                    <a href="/posts/{{slug}}"><img alt="blog" class="post_image" src="{{post_image}}" /></a>
+                                        <p>{{description_short}}</p>
+                                    <a href="/posts/{{slug}}" class="btn btn-primary">Read More</a>
+                                </div>
+                            </article>
+                        </script>
+                    </div>
+                    <input type="hidden" value="1" id="num_loaded" />
+                    <p class="new_store_subheading text-center hidden_now hstc" id="all_loaded">NO MORE POSTS</p>
+                    <p class="text-center" id="loaded_posts">
+                        <a href="#" class="new_store_subheading hstc" id="load_more_posts">
+                            LOAD MORE POSTS
+                            <br/>
+                            <i class="fa fa-long-arrow-down"></i>    
+                        </a>
+                    </p>
+                </div>
+                <div id="sidebar" class="col-sm-4 col-md-4">
+                    <aside class="widget">
+                        <h4>Blog Categories</h4>
+                        <ul class="blog_cats" id="blog_links_container">
+                            <script id="blog_links_template" type="x-tmpl-mustache/text">
+                                <li><a href="/posts_categories/{{slug}}" class="trending_side_link">{{name}}</a></li>
+                            </script>
+                        </ul>
+                    </aside>
+                    <aside class="widget">
+                        <h4>Recent Blog Posts</h4>
+                        <ul class="blog_cats" id="side_links_container">
+                            <script id="side_links_template" type="x-tmpl-mustache/text">
+                                <li><a href="/posts/{{slug}}" class="trending_side_link">{{title}}</a></li>
+                            </script>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="/blog.js"></script>
+<script>
+    $(document).ready(function(e) {
+    function renderAll (){
+        var blogs = getBlogList().sortBy(function(o){ return o.name });
+        var posts = getAllPublishedPosts();
+        var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse();
+        renderPosts("#blog_container", "#blog_template", published_posts);
+        renderPosts("#side_links_container", "#side_links_template", published_posts.slice(0,5));
+        renderBlogs("#blog_links_container", "#blog_links_template", blogs);
+        $('#blog_links_container').prepend("<li><a href='/posts'>All</a></li>")
+        load_more(1);
+        
+        $('#load_more_posts').click(function(e){
+            var i = $('#num_loaded').val();
+            load_more(i);
+            e.preventDefault();
+        });
+    }
+
+    loadMallDataCached(renderAll); 
+})
+</script>
