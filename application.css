@@ -508,6 +508,10 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     padding: 5px 0;
 }
 
+.blog_cats li:hover{
+    background: #299E48;
+}
+
 .home_blog_desc{
     font-size: 14px !important;
     color: #fff !important;
