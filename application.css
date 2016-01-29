@@ -473,6 +473,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 .post_image{
     width:100%;
     margin-bottom:20px;
+    margin-top:10px;
 }
 
 .home_blog_header a{
