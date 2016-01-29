@@ -345,7 +345,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse">              
-                    <ul class="nav pull-right navbar-nav">
+                    <ul class="nav pull-right navbar-nav custom_nav">
                         <li class="active_nav" id="home_link"><a href="/">Home</a></li>
                         <li id="directory_link"><a href="/stores">Directory</a></li>
                          <li id="directory_link" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Promos & Events<span class="caret"></span></a>
