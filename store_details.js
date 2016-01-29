@@ -18,7 +18,7 @@
             renderTemplate("#store_hours_container","#store_hours_template", store_details, "hours");
             renderTemplate("#store_detail_container2","#store_detail_template2", store_details, "store_details");
             renderTemplate("#store_detail_container3","#store_detail_template3", store_details, "store_details");
-            renderTemplate("#store_detail_container3","#store_detail_template3", store_details, "store_details");
+            renderTemplate("#store_detail_container_desc","#store_detail_template_desc", store_details, "store_details");
             renderTemplate("#promo_list_container","#promo_list_template", store_promos, "promotions");
             renderTemplate("#job_list_container","#job_list_template", jobs, "jobs");
             renderSVGMap(store_details);
