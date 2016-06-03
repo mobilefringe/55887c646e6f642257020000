@@ -574,6 +574,7 @@
             var item_list = [];
             var item_rendered = [];
             var template_html = $(template).html();
+            var feed_obj = {}
             Mustache.parse(template_html); 
             $.getJSON("http://twinpines.mallmaverickstaging.com/api/v2/twinpines/social.json").done(function(data) {
                 var insta_feed = data.social.instagram
@@ -585,8 +586,8 @@
                         v.caption = ""
                     }
                     v.image = v.images.low_resolution.url
-                    
                 })
+                
             });
         }
         
