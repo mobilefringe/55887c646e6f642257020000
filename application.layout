@@ -567,10 +567,18 @@
             var posts = getAllPublishedPosts();
             var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse().splice(0,2);
             renderHomeBlog('#home_blog_container', '#home_blog_template', published_posts);
-            
+            renderInstaFeed();
         }
         
-      
+        function renderInstaFeed(){
+            $.getJSON(sessionStorage.MM_URL).done(function(data) {
+                mallData = data;
+                sessionStorage.setItem('mallData', JSON.stringify(data));
+                log('done fetching mallData from: '+sessionStorage.MM_URL);
+                callback();
+            });
+        }
+        
         function renderPropertyLogo(logo_template,site_logo,propertyDetails){
             var item_list = [];
             var item_rendered = [];
