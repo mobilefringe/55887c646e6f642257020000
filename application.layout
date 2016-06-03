@@ -587,11 +587,11 @@
                     }
                     feed_obj.image = v.images.low_resolution.url
                     feed_obj.link = v.link
-                    
+                    console.log(feed_obj)
                     var ig_rendered = Mustache.render(template_html,feed_obj);
                     item_rendered.push(ig_rendered);
                 })
-                console.log(item_rendered)
+                
                 $(container).show();
                 $(container).html(item_rendered.join(''));
             });
