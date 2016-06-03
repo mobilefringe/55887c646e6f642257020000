@@ -62,6 +62,7 @@ html {
     height:65px;
     display:block;
     float: left;
+    text-align:center;
 }
 .ig_image img{
     max-width: 100%;
