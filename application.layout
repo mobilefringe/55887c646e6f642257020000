@@ -584,7 +584,7 @@
                     else{
                         v.caption = ""
                     }
-                    console.log(v.images.low_resolution)
+                    v.image = v.images.low_resolution.url
                     
                 })
             });
