@@ -589,8 +589,7 @@
                     feed_obj.link = v.link
                     
                     var ig_rendered = Mustache.render(template_html,feed_obj);
-                    console.log(ig_rendered)
-                    item_list.push(ig_rendered.trim());
+                    item_rendered.push(ig_rendered.trim());
                 })
                 $(container).show();
                 $(container).html(item_rendered.join(''));
