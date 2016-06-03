@@ -578,7 +578,7 @@
             $.getJSON("http://twinpines.mallmaverickstaging.com/api/v2/twinpines/social.json").done(function(data) {
                 var insta_feed = data.social.instagram
                 $.each(insta_feed, function(i,v){
-                    console.log(v)
+                    console.log(v.caption.text)
                     
                 })
             });
