@@ -64,10 +64,10 @@ html {
     float: left;
 }
 .ig_image img{
-    width: 65px;
+    max-width: 100%;
     margin-left: 0;
     padding: 5px;
-}
+    max-height: 100%;
 
 body {
   margin: 0;
