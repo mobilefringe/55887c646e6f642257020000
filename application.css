@@ -57,7 +57,11 @@ html {
 	    display:none;
 	}
 }
-
+.ig_image{
+    width:65px;
+    height:65px;
+    display:block;
+}
 .ig_image img{
     width: 65px;
     float: left;
