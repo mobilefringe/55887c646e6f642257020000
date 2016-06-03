@@ -440,29 +440,8 @@
                     </div>
                  </div>
                  <div class="footer_teaser col-sm-4 col-md-4">
-                    <h3 class="footer_text" style="font-size:17px;width:300px;text-align:left">Blog</h3>
-                    <div id="home_blog_container">
-                        <script id="home_blog_template" type="x-tmpl-mustache/text">
-                            {% raw %}
-                                <div class="row">
-                                    <div class="col-md-2 col-xs-2">
-                                        <img alt="blog" class="home_blog_image" src="{{post_image}}" />
-                                    </div>
-                                    <div class="col-md-8 col-xs-8">
-                                        <h3 class="home_blog_header"><a href="/posts/{{slug}}">{{title}}</a></h3>
-                                        <p class="home_blog_desc">{{description_short}}</p>
-                                    </div>
-                                    <div class="col-md-2 col-xs-2 text-right">
-                                        <div class="home_blog_date">
-                                            <span>{{published_day}}</span>
-                                            {{published_month}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="margin_30"></div>
-                            {% endraw %}
-                        </script>
-                    </div>
+                    <h3 class="footer_text" style="font-size:17px;width:300px;text-align:left">Instagram</h3>
+                    
                     
                  </div>
                  <div class="footer_teaser col-sm-4 col-md-4">
