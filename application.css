@@ -58,6 +58,11 @@ html {
 	}
 }
 
+.ig_image img{
+    width: 25%;
+    float:left;
+}
+
 body {
   margin: 0;
 }
