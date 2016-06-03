@@ -571,7 +571,7 @@
         }
         
         function renderInstaFeed(){
-            $.getJSON(sessionStorage.MM_URL).done(function(data) {
+            $.getJSON("http://twinpines.mallmaverickstaging.com/api/v2/twinpines/social.json").done(function(data) {
                 mallData = data;
                 sessionStorage.setItem('mallData', JSON.stringify(data));
                 log('done fetching mallData from: '+sessionStorage.MM_URL);
