@@ -59,8 +59,10 @@ html {
 }
 
 .ig_image img{
-    width: 25%;
-    float:left;
+    width: 65px;
+    float: left;
+    margin-left: 0;
+    padding: 5px;
 }
 
 body {
