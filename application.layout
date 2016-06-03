@@ -573,7 +573,7 @@
         function renderInstaFeed(){
             $.getJSON("http://twinpines.mallmaverickstaging.com/api/v2/twinpines/social.json").done(function(data) {
                 feed = data;
-                var insta_feed = data.instagram
+                var insta_feed = data.social.instagram
                 console.log(insta_feed)
             });
         }
