@@ -443,7 +443,9 @@
                     <h3 class="footer_text" style="font-size:17px;width:300px;text-align:left"></h3>
                     <div class="insta_container">
                         <script id="insta_template" type="x-tmpl-mustache/text">
+                        {% raw %}
                             <a class="ig_image" target="_blank" href="{{link}}" title="{{caption}}" ><img src="{{image}}" /></a>
+                        {% endraw %}
                         </script>
                     </div>
                     
