@@ -592,7 +592,6 @@
                     console.log(ig_rendered)
                     item_list.push(ig_rendered.trim());
                 })
-                console.log(item_list)
                 $(container).show();
                 $(container).html(item_rendered.join(''));
             });
