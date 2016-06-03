@@ -579,7 +579,7 @@
                 var insta_feed = data.social.instagram
                 $.each(insta_feed, function(i,v){
                     console.log(v)
-                    v.image = v.low_resolution.url
+                    
                 })
             });
         }
