@@ -591,7 +591,8 @@
                     var ig_rendered = Mustache.render(footer_template_html,val);
                     item_rendered.push(ig_rendered);
                 })
-                
+                 $(container).show();
+                $(container).html(item_rendered.join(''));
             });
         }
         
