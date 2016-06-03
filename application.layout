@@ -567,12 +567,11 @@
             var posts = getAllPublishedPosts();
             var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse().splice(0,2);
             renderHomeBlog('#home_blog_container', '#home_blog_template', published_posts);
-            renderInstaFeed();
+            renderInstaFeed('#insta_container', '#insta_template');
         }
         
         function renderInstaFeed(){
             $.getJSON("http://twinpines.mallmaverickstaging.com/api/v2/twinpines/social.json").done(function(data) {
-                feed = data;
                 var insta_feed = data.social.instagram
                 console.log(insta_feed)
             });
