@@ -36,7 +36,7 @@ function renderHomeBlog(container, template, collection){
             val.description_short = val.body;
         }
         val.description_short = val.description_short.replace("&amp;", "&");
-        var date_blog = new Date((val.publish_date + " 05:00:00").replace(/-/g,"/"));
+        var date_blog = new Date((val.publish_date + "13:00:00").replace(/-/g,"/"));
         val.published_day = date_blog.getDate();
         val.published_month = get_month(date_blog.getMonth()) ;
         
