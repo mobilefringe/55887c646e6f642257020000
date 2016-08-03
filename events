@@ -1,0 +1,159 @@
+<style>
+
+.portfolio_strict .portfolio_item .portfolio_description p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 120px !important;
+}
+    hr {
+       border-top: 1px solid #cccccc;
+}
+</style>
+
+<div class="full_page_photo" style="background-image: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a35f08cc84c593929aa6fba61ad07430/banner.png);">
+     <div class="container">
+          <!-- <section class="call_to_action">
+               <h3 class="animated bounceInDown skincolored">we design <strong>value</strong> into profit</h3>
+               <br>
+               <h4 class="animated bounceInUp">our <strong>customers</strong> are always <strong>happy</strong>!</h4>
+          </section> -->
+     </div>
+</div>
+<div class="main">
+     <div class="container">
+          <section class="hgroup centered">
+               <h1>Events</h1>
+               <!-- <h2>This is a <b>hgroup.centered</b> In hac habitasse platea dictumst. Donec aliquet tellus enim, a tincidunt nulla.</h2> -->
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/home">Home</a> </li>
+                    <li class="active">Events</li>
+               </ul>
+          </section>
+        <div class="portfolio_strict row" id="promo_list_container">
+            <script id="promo_list_template" type="x-tmpl-mustache/text">
+                <div class="col-sm-4 col-md-4">
+                    <div class="portfolio_item wow animated flipInX"> 
+                        <a href="../events/{{slug}}" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                            <figure style="background-image:url('{{alt_promo_image_url}}')">
+                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                    <path d="M 180,0 0,0 0,0 180,0 z"/>
+                                </svg>
+                                <figcaption>
+                                    <p>{{description}}</p>
+                                    <div class="view_button">View More</div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="portfolio_description">
+                            <h3><a href="../events/{{slug}}">{{name}}</a></h3>
+                            <p><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a35f08cc84c593929aa6fba61ad07430/calendar52.png" style="padding-right:5px;">{{dates}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </script>
+        </div>
+      
+        <section class="service_teasers" style="display:none" id="no_promo_container">
+            <h2>There are no Events at this time, please check back later.</h2>
+        </section>
+     </div>
+</div>
+
+<script>
+  $("#event_link").addClass("active");
+    $(document).ready(function() {
+        
+        function renderPageData (){
+            all_events = getEventsList();
+            if (all_events.length > 0 ) {
+                renderTemplate("#promo_list_container","#promo_list_template", all_events);    
+            } else {
+                $("#no_event_container").show();
+            }
+        }
+        
+        
+        function renderTemplate(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            $.each( collection , function( key, val ) {
+
+                if ((val.event_image_url).indexOf('missing.png') > -1){
+                    if (val.eventable_type == "Store") {
+                        var store_details = getStoreDetailsByID(val.promotionable_id);
+                        val.alt_event_image_url = getImageURL(store_details.store_front_url);    
+                    } else {
+                        val.alt_promo_image_url = "http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/dcd66cb0efbccf1a9dc76822e0b9da23/logo_10dundas.png"
+                    }
+                    
+                } else {
+                    val.alt_promo_image_url = getImageURL(val.event_image_url);
+                }
+                start = new Date (val.start_date + "13:00:00Z");
+                end = new Date (val.end_date + "13:00:00Z");
+                val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+                
+                
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            
+        }
+        
+        function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+        
+        
+        loadMallData(renderPageData);
+    });
+    
+</script>
