@@ -96,8 +96,8 @@
                 } else {
                     val.alt_promo_image_url = getImageURL(val.event_image_url);
                 }
-                start = new Date (val.start_date + "13:00:00Z");
-                end = new Date (val.end_date + "13:00:00Z");
+                start = new Date (val.start_date + "T13:00:00Z");
+                end = new Date (val.end_date + "T13:00:00Z");
                 val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();
                 var rendered = Mustache.render(template_html,val);
                 item_rendered.push(rendered);
