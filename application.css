@@ -7429,7 +7429,7 @@ ul.portfolio_filters li .active a:hover {
   height: 100%;
 }
 .portfolio_strict .portfolio_item figure svg path {
-  fill: #fff;
+  fill: #000;
   fill-opacity: 0.5;
   -webkit-transition: all 500ms linear;
   transition: all 500ms linear;
