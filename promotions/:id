@@ -1,0 +1,279 @@
+<style>
+.hgroup h1 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1em;
+    margin: 0 0 0.3em 0;
+    padding: 0;
+    color: black;
+}
+     @media (max-width: 767px) {
+        .portfolio_details{
+           padding-top:20px;
+        }  
+    }
+    .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom:50px;
+}
+* {
+</style>
+
+<div class="main">
+     <div class="container" id="promo_container">
+        <script id="promo_template" type="x-tmpl-mustache/text">
+          <section class="hgroup">
+               <h1>{{name}}</h1>
+               <h2 style="color:black">{{store_name}}</h2>
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/home">Home</a> </li>
+                    <li><a href="/promotions">Promotions</a> </li>
+                    <li class="active">{{name}}</li>
+               </ul>
+          </section>
+          <section>
+               <div class="row">
+                    <div class="col-sm-8 col-md-8">
+                         <div id="zControls">
+                                    <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
+                                    <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
+                                    
+                                </div>
+                                <div id="map" class="panzoom-elements" style=""></div>
+                              
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <article class="portfolio_details">
+                         <section class="portfolio_slider_wrapper">
+                                <a href="{{alt_promo_image_url}}" target="_blank"><img style="width:750px" class="item" src="{{alt_promo_image_url}}" /></a>
+                         </section>
+                         <h5><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/a35f08cc84c593929aa6fba61ad07430/calendar52.png" style="padding-right:5px;">{{dates}}<a href="http://www.facebook.com/sharer.php?u=http://twinpinesmall.kodekloud.io/promotions/{{slug}}" target="_blank">
+                <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1443473069000/Facebook 2.png" style="float:right">
+            </a>
+            <a href="http://twitter.com/share?text=Check%20out%20the%20promotions%20at%20Twinpines%20Mall%20&url=http://http://twinpinesmall.kodekloud.io/{{slug}}">
+                <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1443473073000/Twitter 2.png"
+                style="float:right">
+            </a></h5> 
+                         
+                              <p>{{{rich_description}}}</p>
+                              <a id="store_btn" style="display:none" href="/stores/{{store_detail_btn}}" class="btn btn-danger center-block btn-lg">View Store Details</a>
+                        </article>
+                    </div>
+               </div>
+          </section>
+        </script>
+     </div>
+</div>
+<!--For more information please see http://learnjs.io/blog/2013/11/30/snapsvg-resources/-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+<script src="http://kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/e1fb5e17ab727d248230fbcb51da868f/jquery.panzoom.min.js"></script>
+<script>
+    $("#promotion_link").addClass("active");
+    $(document).ready(function() {
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        promo_details = getPromotionDetailsBySlug(slug);
+        render_page_details("#promo_container", "#promo_template", promo_details)
+        renderSVGMap(promo_details);
+        
+        function renderPageData() {
+            renderSVGMap(store_details);
+        }
+         function renderSVGMap(store_details){
+            var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+            var didPanZoom = false;
+            if(navigator.appVersion.indexOf("MSIE 9.") == -1){
+                $('#map').bind('mousemove', function(e){
+                    //console.log(e.pageX+","+e.pageY);
+                   $('#pop-over').css({'top':e.pageY+20,'left':e.pageX-70});
+                });
+                var s = Snap("#map");
+                var store_svg_id = null;
+                if(store_details.svgmap_region != null && typeof(store_details.svgmap_region)  != 'undefined'){
+                    store_svg_id = "#"+ store_details.svgmap_region;
+                }
+                var stores = getStoresList();
+                Snap.load(getSVGMapURL(), function (f) {
+                    if(store_svg_id!=null){
+                        f.select(store_svg_id).addClass("map-mouse-over");
+                        console.log(store_svg_id)
+                        
+                    }
+                    $.each( stores, function( key, value ) {
+                        if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
+                            var svg_id = "#" + value.svgmap_region;
+                            f.select(svg_id).mouseover(function() {
+                                if(typeof(value) != 'undefined' && value != null){
+                                    this.addClass("map-mouse-over");
+                                    $("#pop-over").show();
+                                    $("#pop-over-map-name").html(value.name);
+                                    $("#pop-over-map-phone").html(value.phone);
+                                }
+                                          
+                            });
+                                
+                            //add the mouse up handler for hiding the pop over when done hovering
+                            
+                                f.select(svg_id).mouseout(function() {
+                                    if (svg_id != store_svg_id) {
+                                        this.removeClass("map-mouse-over");    
+                                    }
+                                    
+                                    $("#pop-over").hide(0);
+                                    
+                                });
+                                    
+                            
+                            
+                            //add the mouse up function for when the user clicks a store
+                            f.select(svg_id).mouseup(function() {
+                                
+                                if(!isMobile && !didPanZoom){
+                                    
+                                    goToStore(value);
+                                }
+                                didPanZoom = false;
+                                      
+                            });
+                        }
+                    });
+                    s.append(f.select("svg"));
+                    
+                    
+                    
+                });
+                
+               var startingMapTransform = 'scale(.3)';
+                var startingPanX =-240;
+        var startingPanY = -270;
+                if(isMobile) {
+                        startingMapTransform = 'scale(0.1)';
+                        startingPanX = -170;
+                        startingPanY = -200;
+                }
+                $('#loading').hide();
+                $( "#page_content" ).fadeIn( "fast", function() {
+                    var panzoom = $(".panzoom-elements").panzoom({
+                        cursor: "move",
+                        increment: 0.15,
+                        minScale: 0.15,
+                        maxScale: 20,
+                        transition: true,
+                        duration: 150,
+                        easing: "ease-in-out",
+                        $zoomIn: $('.zoom-in'),
+                        $zoomOut: $('.zoom-out'),
+                        $zoomRange: $('.zoom-range'),
+                        startTransform: startingMapTransform
+            
+                    });
+                    $(".panzoom-elements").panzoom("pan", startingPanX, startingPanY, { relative: true });
+                    
+                    panzoom.on('panzoomchange', function(e, panzoom, matrix, changed) {
+                      didPanZoom = true;
+                    });
+                    
+                    panzoom.on('panzoomend', function(e, panzoom, matrix, changed) {
+                      didPanZoom = false;
+                    });
+                });
+            }else{
+                $('#loading').hide();
+                $('#zControls').hide();
+                $('#map').hide();
+                $( "#page_content" ).fadeIn( "fast");
+            }
+        }
+        function render_page_details(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);
+            $.each( item_list , function( key, val ) {
+                
+                if ((val.promo_image_url).indexOf('missing.png') > -1){
+                    if (val.promotionable_type == "Store") {
+                        var store_details = getStoreDetailsByID(val.promotionable_id);
+                        val.alt_promo_image_url = getImageURL(store_details.store_front_url);
+                        val.store_detail_btn = store_details.slug 
+                        val.store_name = store_details.name
+                        
+                    } else {
+                        val.alt_promo_image_url = "http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/dcd66cb0efbccf1a9dc76822e0b9da23/logo_10dundas.png"
+                    }
+                    
+                } else {
+                    if (val.promotionable_type == "Store") {
+                        var store_details = getStoreDetailsByID(val.promotionable_id);
+                        val.store_detail_btn = store_details.slug 
+                        val.store_name = store_details.name
+                        
+                    }
+                    val.alt_promo_image_url = getImageURL(val.promo_image_url);
+                    
+                }
+                start = new Date (val.start_date);
+                end = new Date (val.end_date);
+                val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();
+                
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+                
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            if (collection.promotionable_type == "Store"){
+                $("#store_btn").show();
+            }
+        }
+        
+    });
+    
+     function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+        
+
+        
+</script>
