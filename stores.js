@@ -89,7 +89,7 @@ function renderSVGMap(){
         });
         var startingMapTransform = 'scale(0.35)';
         var startingPanX =-250;
-        var startingPanY = -100;
+        var startingPanY = 200;
         if(isMobile) {
                 startingMapTransform = 'scale(0.3)';
                 startingPanX = -140;
