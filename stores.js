@@ -87,11 +87,11 @@ function renderSVGMap(){
             });
             s.append(f.select("svg"));
         });
-        var startingMapTransform = 'scale(0.8)';
+        var startingMapTransform = 'scale(0.3)';
         var startingPanX =150;
         var startingPanY = -150;
         if(isMobile) {
-                startingMapTransform = 'scale(0.4)';
+                startingMapTransform = 'scale(0.3)';
                 startingPanX = -140;
                 startingPanY = -140;
         }
