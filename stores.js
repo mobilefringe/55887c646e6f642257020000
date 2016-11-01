@@ -64,7 +64,7 @@ function renderSVGMap(){
                             $("#pop-over-map-phone").html(value.phone);
                         }
                                   
-                    });
+                    // });
                         
                     //add the mouse up handler for hiding the pop over when done hovering
                     f.select(svg_id).mouseout(function() {
