@@ -6,12 +6,12 @@
         <p id="pop-over-map-phone">Phone Number</p>
     </span>
     <span class="pullright">
-        <img alt="arrow" src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/efe6c3ca0d8b7c35dc70c11b3c667cdf/arrow_green.png">
+        <img alt="arrow" src="//kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/efe6c3ca0d8b7c35dc70c11b3c667cdf/arrow_green.png">
     </span>
 </div>
-<div id="back-top"><img alt="BackToTop" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/c0a5afb0d05049981f657ccf2e67d904/totop.jpg"/></div>
+<div id="back-top"><img alt="BackToTop" src="//kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/c0a5afb0d05049981f657ccf2e67d904/totop.jpg"/></div>
 <div id="loading_screen">
-    <img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif"/>
+    <img src="//kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif"/>
 </div>
 <div id="main_content" style="display:none">
 <div class="full_page_photo" style="overflow:hidden">
@@ -31,7 +31,7 @@
      <div class="container">
           <section class="hgroup centered store_directory_hgroup">
                <h1>Store Directory</h1>
-              <h2><a href="http://cdn.mallmaverick.com/system/site_images/photos/000/003/965/original/NorthPark_Center_Directory_Nov15.pdf?1446671563" style="color:green" target="_blank">Download Store Directory</a></h2>
+              <h2><a href="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/003/965/original/NorthPark_Center_Directory_Nov15.pdf?1446671563" style="color:green" target="_blank">Download Store Directory</a></h2>
                <ul class="breadcrumb pull-right">
                     <li><a href="/home">Home</a> </li>
                     <li class="active">Store Directory</li>
@@ -61,17 +61,17 @@
                                    {{#phone}}
                                    <p class="directory_content">
                                         <div class="directory_phone_col">
-                                            <a href="tel:{{phone}}"><img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/14c4e580b98e351a243ce8245fbcc446/telephone66 2.png">&nbsp;{{phone}}</a>
+                                            <a href="tel:{{phone}}"><img src="//codecloud.cdn.speedyrails.net/sites/55887c646e6f642257020000/14c4e580b98e351a243ce8245fbcc446/telephone66 2.png">&nbsp;{{phone}}</a>
                                         </div>
                                    {{/phone}}
                                    {{#jobs.length}}
                                     <div class="job_count">
-                                        <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1449267385000/suitcase24.png" />{{jobs.length}}
+                                        <img src="//codecloud.cdn.speedyrails.net/sites/55887c646e6f642257020000/image/png/1449267385000/suitcase24.png" />{{jobs.length}}
                                     </div>
                                   {{/jobs.length}}
                                   {{#promotions.length}}
                                     <div class="promotion_count">
-                                        <img src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/image/png/1449267390000/tag32.png" />{{promotions.length}}
+                                        <img src="//codecloud.cdn.speedyrails.net/sites/55887c646e6f642257020000/image/png/1449267390000/tag32.png" />{{promotions.length}}
                                     </div>
                                   {{/promotions.length}}
                                   
@@ -82,8 +82,8 @@
                     </div>
                 </script>
         </div>
-<!--For more information please see http://learnjs.io/blog/2013/11/30/snapsvg-resources/-->
+<!--For more information please see //learnjs.io/blog/2013/11/30/snapsvg-resources/-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
-<script src="http://kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/e1fb5e17ab727d248230fbcb51da868f/jquery.panzoom.min.js"></script>
+<script src="//kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/e1fb5e17ab727d248230fbcb51da868f/jquery.panzoom.min.js"></script>
 
 <script src="/stores.js"></script>
