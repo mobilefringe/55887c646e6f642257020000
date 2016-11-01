@@ -56,7 +56,7 @@ function renderSVGMap(){
             $.each( stores, function( key, value ) {
                 if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
                     var svg_id = "#" + value.svgmap_region;
-                    // f.select(svg_id).mouseover(function() {
+                    f.select(svg_id).mouseover(function() {
                         if(typeof(value) != 'undefined' && value != null){
                             this.addClass("map-mouse-over");
                             $("#pop-over").show();
@@ -64,7 +64,7 @@ function renderSVGMap(){
                             $("#pop-over-map-phone").html(value.phone);
                         }
                                   
-                    // });
+                    });
                         
                     //add the mouse up handler for hiding the pop over when done hovering
                     f.select(svg_id).mouseout(function() {
