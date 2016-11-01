@@ -54,15 +54,16 @@ function renderSVGMap(){
         console.log (getSVGMapURL())
         Snap.load(getSVGMapURL(), function (f) {
             $.each( stores, function( key, value ) {
-                if(value.svgmap_region !== null && typeof(value.svgmap_region)  !== 'undefined'){
+                if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
                     var svg_id = "#" + value.svgmap_region;
                     f.select(svg_id).mouseover(function() {
-                        if(typeof(value) !== 'undefined' && value !== null){
+                        if(typeof(value) != 'undefined' && value != null){
                             this.addClass("map-mouse-over");
                             $("#pop-over").show();
                             $("#pop-over-map-name").html(value.name);
                             $("#pop-over-map-phone").html(value.phone);
                         }
+                                  
                     });
                         
                     //add the mouse up handler for hiding the pop over when done hovering
