@@ -87,7 +87,7 @@ function renderSVGMap(){
             });
             s.append(f.select("svg"));
         });
-        var startingMapTransform = 'scale(0.03)';
+        var startingMapTransform = 'scale(0.3)';
         var startingPanX =150;
         var startingPanY = -150;
         if(isMobile) {
