@@ -47,7 +47,7 @@
                     <div class="col-sm-4 col-md-4 cats_row" data-cat="{{cat_list}}">
                          <div class="portfolio_item wow animated flipInX"> <a href="/stores/{{slug}}" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                               <figure style="background-image:url({{alt_store_front_url}})">
-                                   <svg viewBox="0 0 500 500" preserveAspectRatio="none">
+                                   <svg viewBox="500 500 500 500" preserveAspectRatio="none">
                                         <path d="M 180,0 0,0 0,0 180,0 z"/>
                                    </svg>
                                    <figcaption>
