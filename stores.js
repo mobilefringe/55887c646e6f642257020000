@@ -88,8 +88,8 @@ function renderSVGMap(){
             s.append(f.select("svg"));
         });
         var startingMapTransform = 'scale(0.35)';
-        var startingPanX =-500;
-        var startingPanY = -150;
+        var startingPanX =-250;
+        var startingPanY = -100;
         if(isMobile) {
                 startingMapTransform = 'scale(0.3)';
                 startingPanX = -140;
