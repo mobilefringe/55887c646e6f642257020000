@@ -220,6 +220,7 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
     }
     
     function get_month (id){
+        var month = "" ;
         switch(id) {
             case 0:
                 month = "Jan"
