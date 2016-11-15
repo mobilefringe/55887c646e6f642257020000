@@ -84,7 +84,7 @@ label {
      <div class="contest_form_div">
            <p class="contest_description">Register now for the Milton Monkeys Kids’ Club – it’s fun & it’s free!
 Sign up on-line and you will start receiving a monthly email letting you know when the next event is coming up. When you come to your first event, let the staff know that you signed up on-line and your child will receive a free backpack and membership card entitling them to more gifts when they reach 10 and 20 visits.</p>
-    <form action="http://twinpines.mallmaverickstaging.com/contests/twinpines-test-kids-club/json_entry" method="post" id="contest_form">
+    <form action="http://twinpines.mallmaverickstaging.com/contests/138/json_entry" method="post" id="contest_form">
         <div class="row">
             <p style="display:none">
                 <label for="fieldName">Name</label><br />
