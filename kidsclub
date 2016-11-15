@@ -1,0 +1,305 @@
+<style>
+    .row{
+        margin-left:-15px;
+        margin-right: -15px;
+    }
+    
+    .col-md-4, .col-md-12{
+        margin-bottom: 20px;
+    }
+    
+    .row input[type=text], #enterVerify, .row input[type=email]{
+        width:100%;
+        height:35px;
+        font-size:12px;
+    }
+
+    .contest_description{
+        margin-bottom:35px;
+    }
+    .contest_form_div{
+        margin-top:20px;
+        width:75%;
+        margin-left:80px;
+    }
+    
+    .large_field{
+        display:inline-block;
+        width:49%;
+    }
+    .full_field {
+        padding-bottom: 12px;
+    }
+    
+label {
+   display: inline-block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   font-size: 13px;
+}
+    
+    .small_field {
+       width: 32.5%;
+   display: inline-block;
+   padding-bottom: 12px;
+    }
+     .full_field input {
+        width: 100%;
+   height: 35px;
+   font-size: 12px;
+    }
+    .full_field input, .large_field input, .small_field input {
+        width: 95%;
+   height: 35px;
+   font-size: 12px;
+    }
+    
+    @media (max-width: 767px) {
+        .main{
+            width:95%;
+        }
+        .large_field, .small_field {
+            width:100%;
+        }
+        .contest_form_div{
+            width:100%;
+            margin-left:0;
+        }
+    }
+</style>
+
+<div id="loading_screen">
+    <img alt="loading" src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif"/>
+</div>
+<div  id="main_content" style="display:none">
+    <ul class="breadcrumb">
+        <li><a href="/home">Home</a> </li>
+    </ul>
+    <div class="page_banner">
+        KIDS CLUB
+    </div>
+    <div class="inside_page_content">
+        <img class="contest_image" src="http://assets.codecloudapp.com/sites/54f605386e6f6412de000000/image/jpeg/undefined/milton_kidsclub.jpg" />
+     <br>
+     <div class="contest_form_div">
+           <p class="contest_description">Register now for the Milton Monkeys Kids’ Club – it’s fun & it’s free!
+Sign up on-line and you will start receiving a monthly email letting you know when the next event is coming up. When you come to your first event, let the staff know that you signed up on-line and your child will receive a free backpack and membership card entitling them to more gifts when they reach 10 and 20 visits.</p>
+    <form action="http://mobilefringe.createsend.com/t/d/s/ukihdd/" method="post" id="contest_form">
+        <div class="row">
+            <p style="display:none">
+                <label for="fieldName">Name</label><br />
+                <input id="fieldName" name="cm-name" type="text"/>
+            </p>
+            
+            <div class="col-md-4">
+                <label for="fielddhkjhh">Child's First Name</label><br/>
+                <input id="fielddhkjhh" name="cm-f-dhkjhh" type="text" required placeholder="Child's First Name" />
+            </div>
+            <div class="col-md-4">
+                <label for="fielddhkjhk">Child's Last Name</label><br/>
+                <input id="fielddhkjhk" name="cm-f-dhkjhk" type="text" required placeholder="Child's Last Name"/>
+            </div>
+          
+            <div class="col-md-4">
+                <label for="fielddhkjhu">Child's Year of Birth</label><br />
+                <input id="fielddhkjhu" name="cm-f-dhkjhu" type="text" required placeholder="Child's Year of Birth"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="fielddhkjkl">Parent/Guardian's First Name</label><br />
+                <input id="fielddhkjkl" name="cm-f-dhkjkl" type="text" required placeholder="Parent/Guardian's First Name"/>
+            </div>
+            <div class="col-md-4">
+                <label for="fielddhkjkr">Parent/Guardian's Last Name</label><br />
+                <input id="fielddhkjkr" name="cm-f-dhkjkr" type="text" required placeholder="Parent/Guardian's Last Name"/>
+            </div>
+            <div class="col-md-4">
+                <label for="fieldEmail">Parent/Guardian's Email Address</label><br />
+                <input id="fieldEmail" name="cm-ukihdd-ukihdd" type="email" required placeholder="Parent/Guardian's Email Address"/>
+            </div>
+        </div>
+       
+        <div class="row">
+            
+            <div class="col-md-4">
+                <label for="fielddhkjkt">Postal Code</label><br />
+                <input id="fielddhkjkt" name="cm-f-dhkjkt" type="text" required placeholder="Postal Code" />
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12"  style="margin-bottom:0">
+                <label for="enterVerify">Enter the following number below to proceed: <div id="verifyNum"></div></label>
+            </div>
+            <div class="col-md-4">
+                <input type="hidden" value="701469" id="verifyNumHidden" name="verifyNumHidden" />
+                <input type="text" id="enterVerify" name="enterVerify" />
+                
+            </div>
+            <div class="col-md-12">
+                <span>
+                <br>
+                <label style="font-weight:normal" for="listiljuii"><input id="listiljuii" name="cm-ol-iljuhu" type="checkbox" /> Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Mall.</label>
+            </span>
+            <br>
+            <br>
+            <span>
+                <label for="agree_terms" style="display:none">Agree Terms</label>
+              <input type="checkbox" class="info_check" id="agree_terms" required/>&nbsp;I agree to the <a href = "/pages/milton-privacy-policy"><u>Privacy Policy</u></a>. 
+            </span>
+            <br />
+                <p>
+                
+                
+              <br>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </p>
+            </div>
+        </div>
+    </form>
+     </div>
+    </div>
+</div>
+<script>
+    function randomgen() {
+        var rannumber='';
+        for(ranNum=1; ranNum<=6; ranNum++){
+            rannumber+=Math.floor(Math.random()*10).toString();
+        }
+        $('#verifyNum').html(rannumber);
+        $('#verifyNumHidden').val(rannumber);
+    }
+    randomgen();
+  
+    
+    $('#contest_form').submit(function (e) {
+        
+        if($('#enterVerify').val() == $('#verifyNumHidden').val() ) {
+            if ($('#agree_terms').prop('checked') == true) {
+                var fields_entered = verify_required_fields();
+                if (!fields_entered){
+                    alert("Please enter the required fields.");
+                    e.preventDefault();
+                }
+            }
+            else{
+                alert('Please agree to rules and regulations.');
+                $('#agree_terms').focus();
+                e.preventDefault();
+            }
+        }
+        else{
+            alert("Please Enter Correct Verification Number");
+            randomgen();
+            e.preventDefault();
+        }
+        
+    });
+    
+    
+    function verify_required_fields (){
+        if ($("#fielddhkjhh").val() != "" && $("#fielddhkjhk").val() != "" && $("#fielddhkjhu").val() != "" && $("#fielddhkjkl").val() != "" && $("#fielddhkjkr").val() != "" && $("#fieldEmail").val() != "" && $("#fielddhkjky").val() != "" && $("#fielddhkjkj").val() != "" && $("#fielddhkjkt").val() != "" && $("#fielddhkjkd").val() != "") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function check_email (){
+        var email = $("#fieldEmail").val();
+        if( !validateEmail(email)) {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    function validateEmail($email) {
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      if( !emailReg.test( $email ) ) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    
+    function get_month (id){
+        switch(id) {
+            case 0:
+                month = "Jan"
+                break;
+            case 1:
+                month = "Feb"
+                break;
+            case 2:
+                month = "Mar"
+                break;
+            case 3:
+                month = "Apr"
+                break;
+            case 4:
+                month = "May"
+                break;
+            case 5:
+                month = "June"
+                break;
+            case 6:
+                month = "July"
+                break;
+            case 7:
+                month = "Aug"
+                break;
+            case 8:
+                month = "Sep"
+                break;
+            case 9:
+                month = "Oct"
+                break;
+            case 10:
+                month = "Nov"
+                break;
+            case 11:
+                month = "Dec"
+                break;
+                
+        }
+        return month;
+    }
+
+    $(document).ready(function() {
+        function renderAll (){
+            var propertyDetails = getPropertyDetails();
+            renderPageData('#centre_info_container','#centre_info_template',propertyDetails, 'property_details')
+            $("#loading_screen").hide();
+            $("#main_content").show();
+        }
+        
+    
+        function renderPageData(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "property_details"){
+                item_list.push(collection);
+                collection = []
+                collection = item_list;
+            }
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+    
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };
+
+        loadMallData(renderAll);  
+
+    
+  
+    });
+    
+</script>
