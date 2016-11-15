@@ -1,37 +1,57 @@
 <style>
-    .main{
-        width:940px;
-        margin-left:auto;
-        margin-right:auto;
+    .row{
+        margin-left:-15px;
+        margin-right: -15px;
     }
-    h1, .contest_description {
-        text-align:center;
-        
+    
+    .col-md-4, .col-md-12{
+        margin-bottom: 20px;
     }
-    h1{
-        margin-top:35px;
+    
+    .row input[type=text], #enterVerify, .row input[type=email]{
+        width:100%;
+        height:35px;
+        font-size:12px;
     }
+
     .contest_description{
         margin-bottom:35px;
     }
     .contest_form_div{
         margin-top:20px;
-        width:60%;
-        margin-left:auto;
-        margin-right:auto;
+        width:75%;
+        margin-left:80px;
     }
     
     .large_field{
         display:inline-block;
         width:49%;
     }
-    .small_field {
-        width:32.5%;
-        display:inline-block;
+    .full_field {
+        padding-bottom: 12px;
     }
     
+label {
+   display: inline-block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   font-size: 13px;
+}
+    
+    .small_field {
+       width: 32.5%;
+   display: inline-block;
+   padding-bottom: 12px;
+    }
+     .full_field input {
+        width: 100%;
+   height: 35px;
+   font-size: 12px;
+    }
     .full_field input, .large_field input, .small_field input {
-        width:98%;
+        width: 95%;
+   height: 35px;
+   font-size: 12px;
     }
     
     @media (max-width: 767px) {
@@ -43,133 +63,143 @@
         }
         .contest_form_div{
             width:100%;
+            margin-left:0;
         }
     }
 </style>
 
-
-<div class="main">
-    <h1></h1>
-   
-     <img class="contest_image" src="http://kodekloud.s3.amazonaws.com/sites/54cfab316e6f6433ad020000/696687d954d5727f2581c6e4b92bdfe2/JackAstor's_Contest_Page_940x450px.png" />
+<div id="loading_screen">
+    <img alt="loading" src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif"/>
+</div>
+<div  id="main_content" style="display:none">
+    <ul class="breadcrumb">
+        <li><a href="/home">Home</a> </li>
+    </ul>
+    <div class="page_banner">
+        KIDS CLUB
+    </div>
+    <div class="inside_page_content">
+        <img class="contest_image" src="http://assets.codecloudapp.com/sites/54f605386e6f6412de000000/image/jpeg/undefined/milton_kidsclub.jpg" />
      <br>
      <div class="contest_form_div">
-           <p class="contest_description">Contest closes April 30th, 2015.   One entry per person.  Winner will be contacted via telephone.</p>
-
-         <form action="http://mobilefringe.createsend.com/t/d/s/tkhiut/" method="post" id="contest_form">
+           <p class="contest_description">Register now for the Milton Monkeys Kids’ Club – it’s fun & it’s free!
+Sign up on-line and you will start receiving a monthly email letting you know when the next event is coming up. When you come to your first event, let the staff know that you signed up on-line and your child will receive a free backpack and membership card entitling them to more gifts when they reach 10 and 20 visits.</p>
+    <form action="http://mobilefringe.createsend.com/t/d/s/ukihdd/" method="post" id="contest_form">
+        <div class="row">
             <p style="display:none">
                 <label for="fieldName">Name</label><br />
                 <input id="fieldName" name="cm-name" type="text"/>
             </p>
             
-            <p class="large_field">
-                <label for="firstName">First Name*</label><br/>
-                <input id="firstName" type="text" required placeholder="First Name" />
-            </p>
-            <p class="large_field">
-                <label for="lastName">Last Name*</label><br/>
-                <input id="lastName" type="text" required placeholder="Last Name"/>
-            </p>
+            <div class="col-md-4">
+                <label for="fielddhkjhh">Child's First Name</label><br/>
+                <input id="fielddhkjhh" name="cm-f-dhkjhh" type="text" required placeholder="Child's First Name" />
+            </div>
+            <div class="col-md-4">
+                <label for="fielddhkjhk">Child's Last Name</label><br/>
+                <input id="fielddhkjhk" name="cm-f-dhkjhk" type="text" required placeholder="Child's Last Name"/>
+            </div>
           
-            <p class="large_field">
-                <label for="fieldEmail">Email*</label><br />
-                <input id="fieldEmail" name="cm-tkhiut-tkhiut" type="email" required placeholder="Email"/>
-            </p>
-            <p class="large_field">
-                <label for="fieldjrihe">Phone Number*</label><br />
-                <input id="fieldjrihe" name="cm-f-jrihe" type="text" required placeholder="Phone Number"/>
-            </p>
-            <p class="full_field">
-                <label for="fieldjrihyh">Street Address</label><br />
-                <input id="fieldjrihyh" name="cm-f-jrihyh" type="text" placeholder="Street Address"/>
-            </p>
-            <p class="small_field">
-                <label for="fieldjrihyd">City</label><br />
-                <input id="fieldjrihyd" name="cm-f-jrihyd" type="text" placeholder="City"/>
-            </p>
+            <div class="col-md-4">
+                <label for="fielddhkjhu">Child's Year of Birth</label><br />
+                <input id="fielddhkjhu" name="cm-f-dhkjhu" type="text" required placeholder="Child's Year of Birth"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="fielddhkjkl">Parent/Guardian's First Name</label><br />
+                <input id="fielddhkjkl" name="cm-f-dhkjkl" type="text" required placeholder="Parent/Guardian's First Name"/>
+            </div>
+            <div class="col-md-4">
+                <label for="fielddhkjkr">Parent/Guardian's Last Name</label><br />
+                <input id="fielddhkjkr" name="cm-f-dhkjkr" type="text" required placeholder="Parent/Guardian's Last Name"/>
+            </div>
+            <div class="col-md-4">
+                <label for="fieldEmail">Parent/Guardian's Email Address</label><br />
+                <input id="fieldEmail" name="cm-ukihdd-ukihdd" type="email" required placeholder="Parent/Guardian's Email Address"/>
+            </div>
+        </div>
+       
+        <div class="row">
             
-            <p class="small_field">
-                <label for="fieldjrihs">Postal Code*</label><br />
-                <input id="fieldjrihs" name="cm-f-jrihs" type="text" required placeholder="Postal Code"/>
-            </p>
-            <p class="small_field">
-                <label for="fieldjrihg">Year of Birth*</label><br />
-                <input id="fieldjrihg" name="cm-f-jrihg" type="text" required placeholder= "Year of Birth"/>
-            </p>
-            <p style="display:none">
-                <label for="fieldjrihw">Contest ID</label><br />
-                <input id="fieldjrihw" name="cm-f-jrihw" type="text" />
-            </p>
-            <br>
-            <br>
-            <span>
-                <label for="newsletter_signup" style="display:none">Agree Terms</label>
-              <input type="checkbox" class="info_check" id="newsletter_signup"/>&nbsp;I agree to receive emails from 10 Dundas East
+            <div class="col-md-4">
+                <label for="fielddhkjkt">Postal Code</label><br />
+                <input id="fielddhkjkt" name="cm-f-dhkjkt" type="text" required placeholder="Postal Code" />
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12"  style="margin-bottom:0">
+                <label for="enterVerify">Enter the following number below to proceed: <div id="verifyNum"></div></label>
+            </div>
+            <div class="col-md-4">
+                <input type="hidden" value="701469" id="verifyNumHidden" name="verifyNumHidden" />
+                <input type="text" id="enterVerify" name="enterVerify" />
+                
+            </div>
+            <div class="col-md-12">
+                <span>
+                <br>
+                <label style="font-weight:normal" for="listiljuii"><input id="listiljuii" name="cm-ol-iljuhu" type="checkbox" /> Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Mall.</label>
             </span>
             <br>
             <br>
             <span>
                 <label for="agree_terms" style="display:none">Agree Terms</label>
-              <input type="checkbox" class="info_check" id="agree_terms" required/>&nbsp;I agree to the <a href = "/rules_regulations"><u>terms and conditions</u></a>. 
+              <input type="checkbox" class="info_check" id="agree_terms" required/>&nbsp;I agree to the <a href = "/pages/milton-privacy-policy"><u>Privacy Policy</u></a>. 
             </span>
-            <br>
-            <br>
-            <p>
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </p>
-        </form>
+            <br />
+                <p>
+                
+                
+              <br>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </p>
+            </div>
+        </div>
+    </form>
      </div>
+    </div>
 </div>
-
 <script>
+    function randomgen() {
+        var rannumber='';
+        for(ranNum=1; ranNum<=6; ranNum++){
+            rannumber+=Math.floor(Math.random()*10).toString();
+        }
+        $('#verifyNum').html(rannumber);
+        $('#verifyNumHidden').val(rannumber);
+    }
+    randomgen();
+  
     
     $('#contest_form').submit(function (e) {
-        e.preventDefault();
-        if ($("#agree_terms").prop("checked") == true){
-            var e = verify_required_fields();
-            if (e == true){
-                var name = $("#firstName").val() + " " + $("#lastName").val();
-                $('input[name="cm-name"]').attr('value',name);
-                var date = new Date;
-                contest_id = (get_month(date.getMonth())) + date.getFullYear();
-                $('input[name="cm-f-jrihw"]').attr('value',contest_id);
-                if ($("#newsletter_signup").prop("checked") == true){
-                    var s = check_email();
-                    if (s == true){
-                        var email = $("#fieldEmail").val();
-                        $('input[name="cm-tkyhii-tkyhii"]').attr('value',email);
-                        //console.log($("#subForm").serialize())
-                         $.getJSON(
-                            "http://mobilefringe.createsend.com/t/d/s/tkyhii/?callback=?",
-                           $("#subForm").serialize(),
-                            function (data) {
-                                if (data.Status === 400) {
-                                    alert("Please try again later.");
-                                } else { // 200
-                                    $('#contest_form').unbind('submit').submit();
-                                }
-                        });  
-                    } else {
-                        alert("Invaid E-mail address.")
-                    }
-                    
-                } else {
-                    $('#contest_form').unbind('submit').submit();    
-                }    
-            } else {
-                alert("One or more required fields are blank! please fill in all fields marked with * and try again.")
+        
+        if($('#enterVerify').val() == $('#verifyNumHidden').val() ) {
+            if ($('#agree_terms').prop('checked') == true) {
+                var fields_entered = verify_required_fields();
+                if (!fields_entered){
+                    alert("Please enter the required fields.");
+                    e.preventDefault();
+                }
             }
-            
-            
-        } else {
-            alert("Please agree to the terms and conditions before submitting!")
+            else{
+                alert('Please agree to rules and regulations.');
+                $('#agree_terms').focus();
+                e.preventDefault();
+            }
+        }
+        else{
+            alert("Please Enter Correct Verification Number");
+            randomgen();
+            e.preventDefault();
         }
         
     });
     
     
     function verify_required_fields (){
-        if ($("#firstName").val() != "" && $("#lastName").val() != "" && $("#fieldEmail").val() != "" && $("#fieldjrihe").val() != "" && $("#fieldjrihs").val() != "" && $("#fieldjrihg").val() != "") {
+        if ($("#fielddhkjhh").val() != "" && $("#fielddhkjhk").val() != "" && $("#fielddhkjhu").val() != "" && $("#fielddhkjkl").val() != "" && $("#fielddhkjkr").val() != "" && $("#fieldEmail").val() != "" && $("#fielddhkjky").val() != "" && $("#fielddhkjkj").val() != "" && $("#fielddhkjkt").val() != "" && $("#fielddhkjkd").val() != "") {
             return true;
         } else {
             return false;
@@ -236,7 +266,40 @@
         }
         return month;
     }
+
     $(document).ready(function() {
+        function renderAll (){
+            var propertyDetails = getPropertyDetails();
+            renderPageData('#centre_info_container','#centre_info_template',propertyDetails, 'property_details')
+            $("#loading_screen").hide();
+            $("#main_content").show();
+        }
+        
     
+        function renderPageData(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "property_details"){
+                item_list.push(collection);
+                collection = []
+                collection = item_list;
+            }
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+    
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };
+
+        loadMallData(renderAll);  
+
+    
+  
     });
+    
 </script>
