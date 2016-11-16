@@ -170,7 +170,7 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
     
     $('#contest_form').submit(function (e) {
         e.preventDefault();
-        var form_action = $('#contest_form').attr('action');
+        var form_action = $(this).attr('action');
         if($('#enterVerify').val() == $('#verifyNumHidden').val() ) {
             if ($('#agree_terms').prop('checked') == true) {
                 var fields_entered = verify_required_fields();
