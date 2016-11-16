@@ -177,6 +177,16 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
                 if (!fields_entered){
                     alert("Please enter the required fields.");
                 }
+                else{
+                    var post_data = {};
+                    var form_data = $('#contest_form').serializeObject();
+                    delete(form_data.verifyNumHidden);
+                    delete(form_data.enterVerify)
+                    post_data.json = JSON.stringify(form_data);
+                    $.post(, post_data, function(data){
+                        console.log(data);
+                    })
+                }
             }
             else{
                 alert('Please agree to rules and regulations.');
@@ -186,16 +196,6 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
         else{
             alert("Please Enter Correct Verification Number");
             randomgen();
-        }
-        else{
-            var post_data = {};
-            var form_data = $('#contest_form').serializeObject();
-            delete(form_data.verifyNumHidden);
-            delete(form_data.enterVerify)
-            post_data.json = JSON.stringify(form_data);
-            $.post(, post_data, function(data){
-                console.log(data);
-            })
         }
         
     });
