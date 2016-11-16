@@ -169,25 +169,22 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
   
     
     $('#contest_form').submit(function (e) {
-        
+        e.preventDefault();
         if($('#enterVerify').val() == $('#verifyNumHidden').val() ) {
             if ($('#agree_terms').prop('checked') == true) {
                 var fields_entered = verify_required_fields();
                 if (!fields_entered){
                     alert("Please enter the required fields.");
-                    e.preventDefault();
                 }
             }
             else{
                 alert('Please agree to rules and regulations.');
                 $('#agree_terms').focus();
-                e.preventDefault();
             }
         }
         else{
             alert("Please Enter Correct Verification Number");
             randomgen();
-            e.preventDefault();
         }
         
     });
