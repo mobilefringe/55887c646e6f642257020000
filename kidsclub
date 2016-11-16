@@ -191,7 +191,7 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
             var form_data = $('#contest_form').serializeObject();
             delete(form_data.verifyNumHidden);
             delete(form_data.enterVerify)
-            data.json = JSON.stringify()
+            data.json = JSON.stringify(form_data);
         }
         
     });
