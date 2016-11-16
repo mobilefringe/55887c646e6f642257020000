@@ -135,7 +135,7 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
             <div class="col-md-12">
                 <span>
                 <br>
-                <label style="font-weight:normal" for="listiljuii"><input id="listiljuii" name="newsletter" type="checkbox" /> Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Mall.</label>
+                <label style="font-weight:normal" for="listiljuii"><input id="listiljuii" name="newsletter" type="checkbox" value="true" /> Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Mall.</label>
             </span>
             <br>
             <br>
