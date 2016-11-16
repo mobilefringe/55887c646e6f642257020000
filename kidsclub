@@ -192,7 +192,7 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
             delete(form_data.verifyNumHidden);
             delete(form_data.enterVerify)
             post_data.json = JSON.stringify(form_data);
-            $.post('https://twinpines.mallmaverickstaging.com/contests/twinpines-test-kids-club/json_entry', post_data, function(data){
+            $.post($('#contest_form').attr('action')', post_data, function(data){
                 console.log(data);
             })
         }
