@@ -185,7 +185,7 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
                     post_data.json = JSON.stringify(form_data);
                     $.post(, post_data, function(data){
                         console.log(data);
-                    })
+                    });
                 }
             }
             else{
