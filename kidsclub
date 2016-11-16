@@ -187,11 +187,14 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
             randomgen();
         }
         else{
-            var data = {};
+            var post_data = {};
             var form_data = $('#contest_form').serializeObject();
             delete(form_data.verifyNumHidden);
             delete(form_data.enterVerify)
-            data.json = JSON.stringify(form_data);
+            post_data.json = JSON.stringify(form_data);
+            $.post('https://twinpines.mallmaverickstaging.com/contests/twinpines-test-kids-club/json_entry', post_data, function(data){
+                console.log(data);
+            })
         }
         
     });
