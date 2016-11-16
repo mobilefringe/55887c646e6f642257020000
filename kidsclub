@@ -186,6 +186,13 @@ Sign up on-line and you will start receiving a monthly email letting you know wh
             alert("Please Enter Correct Verification Number");
             randomgen();
         }
+        else{
+            var data = {};
+            var form_data = $('#contest_form').serializeObject();
+            delete(form_data.verifyNumHidden);
+            delete(form_data.enterVerify)
+            data.json = JSON.stringify()
+        }
         
     });
     
