@@ -78,7 +78,7 @@
             imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
         });      
     });
-    setEndPoint('http://twinpines.mallmaverick.com.com/api/v3/twinpines/all.json');
+    setEndPoint('https://twinpines.com/api/v3/twinpines/all.json');
     sessionStorage.setItem('primary_locale', 'en-CA');
     sessionStorage.setItem('secondary_locale', 'fr-CA');
 </script>
