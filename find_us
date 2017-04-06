@@ -1,0 +1,110 @@
+<iframe src="http://assets.codecloudapp.com/sites/55887c646e6f642257020000/text/html/1490198874000/email_zipped.html"></iframe
+<div class="full_page_photo" style="background-image: url(http://kodekloud.s3.amazonaws.com/sites/54cfab316e6f6433ad020000/f14cc5a56ecf3c1a6d02cf7d4c31514f/contact.png);">
+</div>
+<div class="main">
+     <div class="container">
+          <section class="hgroup">
+               <h1>Find Us</h1>
+               <div id = "contact_container">
+               <script id="contact_template" type="x-tmpl-mustache/text">
+                <h2><strong>{{contact_name}}</strong>  {{contact_phone}} <br> {{contact_email}}</h2>
+               </script>
+               </div>
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/home">Home</a> </li>
+                    <li><a href="/home">Contact Us</a> </li>
+                    <li class="active">Find Us</li>
+               </ul>
+          </section>
+          <section class="article-text">
+               <div class="row">
+                    
+                    <div class="col-sm-4 col-md-4">
+                        <div class="service_teaser vertical">
+                        <style scoped>
+                            .service_details{
+                                background:none #222222 !important;    
+                                text-align:center;
+                                color:white;
+                                height:480px !important;
+                            }
+                            
+                            .service_details img{
+                                margin-top:50px;
+                                margin-bottom:50px;
+                            }
+                            
+                            .service_details i{
+                                height:40px;
+                                width:40px;
+                                font-size:30px;
+                            }
+                            
+                            .service_details p {
+                                margin-bottom:0 !important;
+                                font-size:16px;
+                            }
+                            
+                        </style>
+                            <div class="service_details" id="centre_info_container">
+                                <script id="centre_info_template" type="x-tmpl-mustache/text">
+                                    <img src="{{site_logo}}" />
+                                    <p><strong>{{name}}</strong></p>
+                                    <a href = "http://bentallkennedy.com/" target="_blank"><img style="margin-bottom:30px" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/14d7e193a4e12033723bf919343b9d1f/bental-logo1.png" /></a>
+                                    <br>
+                                    <a href="https://www.facebook.com/10DundasEast" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/10DundasEast" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://instagram.com/10dundaseast" target="_blank"><i class="fa fa-instagram"></i></a><a href="https://www.youtube.com/user/10DundasEast" target="_blank"><i class="fa fa-youtube"></i></a>
+                                    <br>
+                                    <br>
+                                    <p>{{address1}} </br> {{postal_code}}</p>
+                                    <p>{{city}} , {{province_state}}</p>
+                                    
+                                    
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_form col-sm-8 col-md-8">
+                            <iframe class="gmap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2886.574530718601!2d-79.3804447!3d43.6570197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34cacb611c5f%3A0x4c69204eabe095dc!2s10+Dundas+St+E%2C+Ryerson+University%2C+Toronto%2C+ON+M5B!5e0!3m2!1sen!2sca!4v1422385569071" style="border:0" title="Map">Directions</iframe>
+
+                    </div>
+               </div>
+          </section>
+         
+     </div>
+     
+</div>
+
+<script>
+
+    $("#contact_link").addClass("active");
+    $(document).ready(function() {
+        
+                
+        function renderPageData(){
+            var propertyDetails = getPropertyDetails();
+            renderTemplate("#centre_info_container", "#centre_info_template", propertyDetails)
+            renderTemplate("#contact_container", "#contact_template", propertyDetails)
+        }
+        
+        function renderTemplate(container, template, collection){
+            
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);
+            $.each( item_list , function( key, val ) {
+                val.alt_site_logo = getImageURL(val.site_logo);
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            
+        }
+        
+
+        
+        loadMallData(renderPageData);
+    });
+</script>
