@@ -83,7 +83,6 @@ img {
     
 }
 </style>
-hello
 <section id="slider_wrapper" class="slider_wrapper">
      <div id="main_flexslider" class="flexslider">
           <ul class="slides" id="home_banner">
