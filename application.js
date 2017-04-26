@@ -1,3 +1,4 @@
+console.log("Hello!")
 /*Created 2015-01-15  by Andy*/
 function renderLayoutHours(container, template, collection){
     var item_list = [];
