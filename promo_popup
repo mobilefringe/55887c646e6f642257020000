@@ -28,6 +28,7 @@
     <div id="catfish-max" class="catfish-max flexslider">
         <div id="catfish_trigger" class="catfish-heading">
             <h2 class="offers-title">Today's Deals</h2>
+            <i class="fa fa-times" aria-hidden="true"></i>
         </div>
         <ul class="slides" id="promo_conatiner">
             <script id="promo_template" type="x-tmpl-mustache/text">
