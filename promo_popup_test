@@ -1,1 +1,83 @@
-<h1> HELLOOOOO</h1>
+<div class="clearfix" id="page"><!-- group -->
+   <div class="clearfix grpelem" id="pu987"><!-- group -->
+    <div class="browser_width" id="u987-bw">
+     <div class="rgba-background" id="u987"><!-- simple frame --></div>
+    </div>
+    <div class="clearfix" id="u643"><!-- group -->
+     <div class="clearfix" id="u581-4"><!-- content -->
+      <p>MALL MAVERICK</p>
+     </div>
+     <div class="clearfix" id="u589-4"><!-- content -->
+      <p>DIRECTORY</p>
+     </div>
+     <div class="clearfix" id="u593-4"><!-- content -->
+      <p>EVENTS &amp; PROMOS</p>
+     </div>
+     <div class="clearfix" id="u603-4"><!-- content -->
+      <p>DINE</p>
+     </div>
+     <div class="clearfix" id="pu628"><!-- column -->
+      <div class="clip_frame pinned-colelem" id="u628"><!-- image -->
+       <img class="block" id="u628_img" src="images/group%2031.png?crc=4155220814" alt="" width="125" height="20"/>
+      </div>
+      <div class="clearfix pinned-colelem" id="pu613-4"><!-- group -->
+       <div class="clearfix" id="u613-4"><!-- content -->
+        <p>LOCATION</p>
+       </div>
+       <div class="clearfix" id="u623-4"><!-- content -->
+        <p>CENTRE INFO</p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <ul class="AccordionWidget clearfix" id="accordionu1229" data-rotate="180.00" data-mu-ie-matrix="progid:DXImageTransform.Microsoft.Matrix(M11=-1,M12=0,M21=0,M22=-1,SizingMethod='auto expand')" data-mu-ie-matrix-dx="0" data-mu-ie-matrix-dy="-2.6290081223123707e-13"><!-- vertical box -->
+     <li class="AccordionPanel clearfix colelem" id="u1238"><!-- vertical box --><div class="AccordionPanelTab museBGSize rgba-background clearfix colelem" id="u1239-4"><!-- content --><p>a</p></div><div class="AccordionPanelContent disn rgba-background clearfix colelem" id="u1240"><!-- group --><div class="SlideShowWidget clearfix grpelem" id="slideshowu1771" data-mu-ie-matrix="progid:DXImageTransform.Microsoft.Matrix(M11=-1,M12=0,M21=0,M22=-1,SizingMethod='auto expand')" data-mu-ie-matrix-dx="0" data-mu-ie-matrix-dy="0"><!-- none box --><div class="popup_anchor" id="u1781popup"><div class="SlideShowContentPanel clearfix" id="u1781"><!-- stack box --><div class="SSSlide clip_frame grpelem" id="u1784"><!-- image --><img class="block ImageInclude" id="u1784_img" data-src="images/promo1-01.jpg?crc=4169666120" src="images/blank.gif?crc=4208392903" alt="" data-width="613" data-height="355"/></div><div class="SSSlide invi clip_frame grpelem" id="u1907"><!-- image --><img class="block ImageInclude" id="u1907_img" data-src="images/promo2-01.jpg?crc=4066418885" src="images/blank.gif?crc=4208392903" alt="" data-width="613" data-height="355"/></div><div class="SSSlide invi clip_frame grpelem" id="u1933"><!-- image --><img class="block ImageInclude" id="u1933_img" data-src="images/promo3-01.jpg?crc=3793569577" src="images/blank.gif?crc=4208392903" alt="" data-width="613" data-height="355"/></div><div class="SSSlide invi clip_frame grpelem" id="u1959"><!-- image --><img class="block ImageInclude" id="u1959_img" data-src="images/promo4-01.jpg?crc=3947847350" src="images/blank.gif?crc=4208392903" alt="" data-width="613" data-height="355"/></div><a class="nonblock nontext SSSlide MuseLinkActive invi clip_frame grpelem" id="u1985" href="index.html"><!-- image --><img class="block ImageInclude" id="u1985_img" data-src="images/promo5-01.jpg?crc=467326762" src="images/blank.gif?crc=4208392903" alt="" data-width="613" data-height="355"/></a><div class="SSSlide invi clip_frame grpelem" id="u2011"><!-- image --><img class="block ImageInclude" id="u2011_img" data-src="images/promo6-01.jpg?crc=252356203" src="images/blank.gif?crc=4208392903" alt="" data-width="613" data-height="355"/></div></div></div><div class="popup_anchor" id="u1793popup"><div class="SlideShowCaptionPanel clearfix" id="u1793"><!-- stack box --><div class="SSSlideCaption clearfix grpelem" id="u1794-7"><!-- content --><p id="u1794-5"><span id="u1794">Store Name - Promotion Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span id="u1794-2"> </span><a class="nonblock" href="index.html"><span id="u1794-3">Read More</span></a></p></div><div class="SSSlideCaption invi clearfix grpelem" id="u1923-7"><!-- content --><p id="u1923-5"><span id="u1923">Store Name - Promotion Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span id="u1923-2"> </span><a class="nonblock" href="index.html"><span id="u1923-3">Read More</span></a></p></div><div class="SSSlideCaption invi clearfix grpelem" id="u1949-7"><!-- content --><p id="u1949-5"><span id="u1949">Store Name - Promotion Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span id="u1949-2"> </span><a class="nonblock" href="index.html"><span id="u1949-3">Read More</span></a></p></div><div class="SSSlideCaption invi clearfix grpelem" id="u1975-7"><!-- content --><p id="u1975-5"><span id="u1975">Store Name - Promotion Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span id="u1975-2"> </span><a class="nonblock" href="index.html"><span id="u1975-3">Read More</span></a></p></div><div class="SSSlideCaption invi clearfix grpelem" id="u2001-7"><!-- content --><p id="u2001-5"><span id="u2001">Store Name - Promotion Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span id="u2001-2"> </span><a class="nonblock" href="index.html"><span id="u2001-3">Read More</span></a></p></div><div class="SSSlideCaption invi clearfix grpelem" id="u2027-7"><!-- content --><p id="u2027-5"><span id="u2027">Store Name - Promotion Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span id="u2027-2"> </span><a class="nonblock" href="index.html"><span id="u2027-3">Read More</span></a></p></div></div></div><div class="popup_anchor" id="u1788-4popup"><div class="SlideShowLabel SSSlideCount clearfix" id="u1788-4"><!-- content --><p><span id="u1788">6 - 6</span></p></div></div><div class="popup_anchor" id="u1792-4popup"><div class="SSPreviousButton clearfix" id="u1792-4"><!-- content --><p><span id="u1792">&lt;</span></p></div></div><div class="popup_anchor" id="u1790-4popup"><div class="SSNextButton clearfix" id="u1790-4"><!-- content --><p>&gt;</p></div></div></div></div></li>
+    </ul>
+   </div>
+   <div class="clearfix grpelem" id="pslideshowu646"><!-- group -->
+    <div class="SlideShowWidget clearfix HeroFillFrame grpelem" id="slideshowu646"><!-- none box -->
+     <div class="popup_anchor" id="u652popup">
+      <div class="SlideShowContentPanel clearfix" id="u652"><!-- stack box -->
+       <div class="SSSlide clip_frame grpelem" id="u2491"><!-- image -->
+        <img class="ImageInclude" id="u2491_img" data-src="images/fashion13.jpg?crc=3901770799" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="2120"/>
+       </div>
+       <div class="SSSlide invi clip_frame grpelem" id="u2511"><!-- image -->
+        <img class="ImageInclude" id="u2511_img" data-src="images/fashion-glasses-go-pro-female-157888.jpg?crc=3952663016" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="1413"/>
+       </div>
+       <div class="SSSlide invi clip_frame grpelem" id="u2531"><!-- image -->
+        <img class="ImageInclude" id="u2531_img" data-src="images/49d2b547058549586ead0ac0aa3.jpg?crc=316037730" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="3177"/>
+       </div>
+       <div class="SSSlide invi clip_frame grpelem" id="u767"><!-- image -->
+        <img class="ImageInclude" id="u767_img" data-src="images/fabulous-fashion-model-portrait-1920x1200-wide-wallpapersnet.jpg?crc=255593462" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="1325"/>
+       </div>
+       <div class="SSSlide invi clip_frame grpelem" id="u793"><!-- image -->
+        <img class="ImageInclude" id="u793_img" data-src="images/fashion13.jpg?crc=3901770799" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="2103"/>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="SlideShowWidget clearfix HeroFillFrame grpelem" id="slideshowu2079"><!-- none box -->
+     <div class="popup_anchor" id="u2085popup">
+      <div class="SlideShowContentPanel clearfix" id="u2085"><!-- stack box -->
+       <div class="SSSlide clip_frame grpelem" id="u2090"><!-- image -->
+        <img class="ImageInclude" id="u2090_img" data-src="images/menu.jpg?crc=4138990386" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="219"/>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="SlideShowWidget clearfix HeroFillFrame grpelem" id="slideshowu2317"><!-- none box -->
+     <div class="popup_anchor" id="u2328popup">
+      <div class="SlideShowContentPanel clearfix" id="u2328"><!-- stack box -->
+       <div class="SSSlide clip_frame grpelem" id="u2329"><!-- image -->
+        <img class="ImageInclude" id="u2329_img" data-src="images/menu2.jpg?crc=15882478" src="images/blank.gif?crc=4208392903" alt="" data-width="2120" data-height="309"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="verticalspacer" data-offset-top="1089" data-content-above-spacer="1090" data-content-below-spacer="1"></div>
+  </div>
+  <div class="preload_images">
+   <img class="preload" src="images/group%202%20button.png?crc=179245793" alt=""/>
+   <img class="preload" src="images/group%202%20button-u1239-4-a-fr.png?crc=4281338586" alt=""/>
+  </div>
