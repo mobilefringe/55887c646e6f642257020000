@@ -13,6 +13,15 @@
         background: rgba(255, 255, 255, 0);
         transition: all .5s ease 0.01s
     }
+    .multi-catfish .catfish-max {
+        background: #000;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0
+    }
 </style>
 
 <div class="catfish-container multi-catfish">
