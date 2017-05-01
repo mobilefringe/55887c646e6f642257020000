@@ -1,27 +1,34 @@
 <style>
-    /*.catfish-container {*/
-    /*    width: 100%;*/
-    /*    min-width: 312px;*/
-    /*    position: fixed;*/
-    /*    bottom: 0;*/
-    /*    left: 0;*/
-    /*    z-index: 200;*/
-    /*    background: #fff*/
-    /*}*/
-    /*.multi-catfish {*/
-    /*    background: #fff;*/
-    /*    background: rgba(255, 255, 255, 0);*/
-    /*    transition: all .5s ease 0.01s*/
-    /*}*/
-    /*.multi-catfish .catfish-max {*/
-    /*    background: #000;*/
-    /*    width: 100%;*/
-    /*    margin: 0 auto;*/
-    /*    position: absolute;*/
-    /*    bottom: 0;*/
-    /*    left: 0;*/
-    /*    right: 0*/
-    /*}*/
+    .catfish-container {
+        width: 100%;
+        min-width: 312px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 200;
+        background: #fff
+    }
+    .multi-catfish {
+        background: #fff;
+        background: rgba(255, 255, 255, 0);
+        transition: all .5s ease 0.01s
+    }
+    .multi-catfish .catfish-max {
+        background: #000;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0
+    }
+    .multi-catfish .catfish-max .offers-title {
+        color: #fff;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        margin: 1em 0 .4em
+    }
 </style>
 
 <div class="catfish-container multi-catfish">
