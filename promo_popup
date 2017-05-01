@@ -3,32 +3,30 @@
         <div id="catfish_trigger" class="catfish-heading">
             <h2 class="offers-title">Today's Deals</h2>
         </div>
-        <ul class="slides">
-            <li class="blo-crop-capri-slide">
-                <div class="slides__text">
-                    <h3><span class="slide__text__head">TOPS:</span>Buy 1, Get 1 at $14.90</h3>
-                    <div class="reitmans-cta">
-                        <a href="http://www.reitmans.com/en/shop-all-promo-tops" title="TOPS: Buy 1, Get 1 at $14.90" data-id="promo_catfish-expanded" data-name="promo_catfish" data-position="catfish-expanded"><span class="btn btn-default">Shop now</span></a>
+        <ul class="slides" id="promo_conatiner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li class="blo-crop-capri-slide">
+                    <div class="slides__text">
+                        <h3><span class="slide__text__head">TOPS:</span>Buy 1, Get 1 at $14.90</h3>
+                        <div class="reitmans-cta">
+                            <a href="http://www.reitmans.com/en/shop-all-promo-tops" title="TOPS: Buy 1, Get 1 at $14.90" data-id="promo_catfish-expanded" data-name="promo_catfish" data-position="catfish-expanded"><span class="btn btn-default">Shop now</span></a>
+                        </div>
                     </div>
-                </div>
-            </li>
- 
-            <li class="denim-slide">
-                <div class="slides__text">
-                    <h3><span class="slide__text__head">Signature Soft&nbsp;Jeans:</span>$34<sup style="font-size: .6em; top: -.6em;">90</sup></h3>
-                    <div class="reitmans-cta">
-                        <a href="http://www.reitmans.com/en/jeans-signature-soft" title="SIGNATURE SOFT JEANS:" data-id="signatureSoft_catfish-expanded" data-name="signatureSoft_catfish" data-position="catfish-expanded"><span class="btn btn-default">Shop now</span></a>
-                    </div>
-                </div>
-            </li>
-            <li class="sale-slide">
-                <div class="slides__text">
-                    <h3><span class="slide__text__head">Sale Items:</span>EXTRA 40% OFF</h3>
-                    <div class="reitmans-cta">
-                        <a href="http://www.reitmans.com/en/sale" title="SALE ITEMS:" data-id="sale_slide_catfish-expanded" data-name="sale_slide_catfish" data-position="catfish-expanded"><span class="btn btn-default">Shop now</span></a>
-                    </div>
-                </div>
-            </li>
+                </li>
+            </script>
         </ul>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        function renderPageData (){
+            var promos = getPromotionsList();
+            
+            
+            $('.flexslider').flexslider({
+                animation: "slide",
+            });
+        }
+        loadMallData(renderPageData);
+    });
+</script>
