@@ -52,6 +52,12 @@
             $('.flexslider').flexslider({
                 animation: "slide",
             });
+            
+            $("#catfish_trigger").click(function() {
+        		toggleCatfish();
+        		runFlexslider();
+        		return false;
+        	});
         }
         loadMallData(renderPageData);
     });
