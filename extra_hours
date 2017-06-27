@@ -2,7 +2,7 @@
     #page_content {
         max-width: 400px;
     }
-    #page_content p {
+    #page_content .hour_item {
         display: inline-block;
         width: 49%;
     }
