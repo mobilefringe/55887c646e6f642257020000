@@ -22,9 +22,7 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
-            
-            $(container).show();
-            $(container).html(item_rendered.join('')); 
+
         }
         loadMallDataCached(renderPage);
     });
