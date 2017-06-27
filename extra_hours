@@ -32,11 +32,11 @@
             }); 
             
             var hour_item = $('p');
+            console.log(hour_item)
             var hours = [];
             $.each(hour_item, function(key, val) {
                 var container = $(val);
                 // var gallery_slug = $(val).attr('source');
-                // gallery = getFashionBySlug(gallery_slug).fashion_images;
                 
                 
                 renderGeneral(container, "#hours_template", hour_item);
