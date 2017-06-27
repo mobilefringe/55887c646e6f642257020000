@@ -8,7 +8,7 @@
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             prefix = get_prefix();
-            var pages_json = prefix + "/pages/" + slug + ".json"
+            var pages_json = prefix + "/pages/twinpines-test-hours.json"
             console.log(pages_json);
             $.getJSON(pages_json).done(function(data) {
                 
