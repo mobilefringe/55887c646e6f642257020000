@@ -3,7 +3,6 @@
             display: inline-block;
             width: 49%;
         }
-    }
 </style>
 
 <div class="content_space">
