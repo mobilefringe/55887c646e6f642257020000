@@ -1,4 +1,7 @@
 <style>
+    #page_content {
+        max-width: 400px;
+    }
     #page_content p {
         display: inline-block;
         width: 49%;
