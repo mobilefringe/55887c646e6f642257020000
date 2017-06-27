@@ -1,13 +1,17 @@
+<style>
+    #page_content {
+        p {
+            display: inline-block;
+            width: 49%;
+        }
+    }
+</style>
+
 <div class="content_space">
     <h1 id="page_title"></h1>
     <div id="page_content"></div>
     
-    <script id="hours_template" type="x-tmpl-mustache/text">
-        <div class="col-md-6">
-            {{.}}
-                
-        </div>
-    </script>
+    
 
 </div>
 <script>
@@ -30,18 +34,6 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
-            
-            var hour_item = $('p');
-            console.log(hour_item)
-            var hours = [];
-            $.each(hour_item, function(key, val) {
-                var container = $(val);
-                // var gallery_slug = $(val).attr('source');
-                
-                
-                renderGeneral(container, "#hours_template", hour_item);
-            });
-        
         }
         
         function renderGeneral(container, template, collection){
