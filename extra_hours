@@ -39,7 +39,7 @@
                 // gallery = getFashionBySlug(gallery_slug).fashion_images;
                 
                 
-                renderGallery(container, "#hours_template", hour_item);
+                renderGeneral(container, "#hours_template", hour_item);
             });
         
         }
