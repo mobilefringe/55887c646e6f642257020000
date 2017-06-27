@@ -17,7 +17,7 @@
             console.log(pages_json);
             $.getJSON(pages_json).done(function(data) {
                 $('#page_title').html(data.title);
-                $('#page_content').html(data.body);
+                // $('#page_content').html(data.body);
                 
                 $("#page_content p").addClass("hour_item")
             }).fail(function(jqXHR) {
