@@ -1,6 +1,14 @@
 <div class="content_space">
     <h1 id="page_title"></h1>
     <div id="page_content"></div>
+    
+    <script id="hours_template" type="x-tmpl-mustache/text">
+        <div class="col-md-6">
+            
+                
+        </div>
+    </script>
+
 </div>
 <script>
     $(document).ready(function(){
@@ -22,7 +30,18 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
-
+            
+            var hour_item = $('p');
+            var hours = [];
+            $.each(hour_item, function(key, val) {
+                var container = $(val);
+                // var gallery_slug = $(val).attr('source');
+                // gallery = getFashionBySlug(gallery_slug).fashion_images;
+                
+                
+                renderGallery(container, "#hours_template", hour_item);
+            });
+        
         }
         loadMallDataCached(renderPage);
     });
