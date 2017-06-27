@@ -4,7 +4,6 @@
 </div>
 <script>
     $(document).ready(function(){
-        init();
         function renderPage(){
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
@@ -23,6 +22,9 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
+            
+            $(container).show();
+            $(container).html(item_rendered.join('')); 
         }
         loadMallDataCached(renderPage);
     });
