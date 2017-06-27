@@ -8,13 +8,15 @@
     }
 </style>
 
-<div class="content_space">
-    <h1 id="page_title"></h1>
+<div class="main">
+     <div class="container">
+        <h1 id="page_title"></h1>
     
-    <div class="rounded-corners"
-        <div id="page_content"></div>
+        <div class="rounded-corners">
+            <div id="page_content"></div>
+        </div>
     </div>
-    
+</div>
     
 
 </div>
