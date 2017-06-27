@@ -3,7 +3,7 @@
         <h1 id="page_title"></h1>
     
         <div class="rounded-corners">
-            <div id="page_content"></div>
+            <!--<div id="page_content"></div>-->
         </div>
     </div>
 </div>
