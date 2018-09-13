@@ -84,20 +84,17 @@ img {
 }
 </style>
 <section id="slider_wrapper" class="slider_wrapper">
-     <div id="main_flexslider" class="flexslider">
-          <ul class="slides" id="home_banner">
-          
+    <div id="main_flexslider" class="flexslider">
+        <ul class="slides" id="home_banner">
             <script id="banner_template" type="x-tmpl-mustache/text">
-                 
-               <li class="item">
-                <a href="{{url}}" {{css}} onclick="{{noLink}}">
-                    <img src="{{image_url}}"/>
+                <li class="item">
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img src="{{image_url}}"/>
                     </a>
-               </li>
-              
+                </li>
             </script>
-          </ul>
-     </div>
+        </ul>
+    </div>
 </section>
  <section class="call_to_action">
     <div id="todays_hours_container">
